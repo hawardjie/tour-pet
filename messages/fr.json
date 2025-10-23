@@ -1,0 +1,67 @@
+{
+  "common": {
+    "home": "Accueil",
+    "breeds": "Races",
+    "services": "Services",
+    "about": "À propos",
+    "contact": "Contact",
+    "language": "Langue",
+    "settings": "Paramètres"
+  },
+  "home": {
+    "title": "Bienvenue chez TourPet",
+    "subtitle": "Votre partenaire de confiance pour les soins canins",
+    "description": "Services professionnels de soins pour chiens, informations complètes sur les races et conseils d'experts pour les amoureux des chiens.",
+    "exploreBreedsButton": "Explorer les races",
+    "viewServicesButton": "Voir les services",
+    "whyChooseUs": "Pourquoi choisir TourPet?",
+    "experiencedTitle": "Professionnels expérimentés",
+    "experiencedDesc": "Notre équipe d'experts certifiés en soins canins",
+    "safetyTitle": "La sécurité d'abord",
+    "safetyDesc": "La sécurité de votre animal est notre priorité absolue",
+    "comprehensiveTitle": "Soins complets",
+    "comprehensiveDesc": "Des besoins de base aux soins spécialisés"
+  },
+  "breeds": {
+    "title": "Encyclopédie des races de chiens",
+    "subtitle": "Explorez des informations complètes sur plus de 25 races populaires",
+    "searchPlaceholder": "Rechercher des races...",
+    "filterAll": "Toutes les races",
+    "filterSize": "Filtrer par taille",
+    "filterGroup": "Filtrer par groupe",
+    "size": "Taille",
+    "group": "Groupe",
+    "origin": "Origine",
+    "lifespan": "Espérance de vie",
+    "temperament": "Tempérament",
+    "exercise": "Exercice",
+    "grooming": "Toilettage",
+    "training": "Entraînement",
+    "goodWith": "Bon avec",
+    "characteristics": "Caractéristiques",
+    "careNotes": "Notes de soins"
+  },
+  "services": {
+    "title": "Nos services de soins pour chiens",
+    "subtitle": "Des soins professionnels et affectueux pour vos membres de la famille à fourrure",
+    "bookButton": "Réserver un service",
+    "backToHome": "Retour à l'accueil",
+    "dogSitting": "Garde de chiens",
+    "dogWalking": "Promenade de chiens",
+    "whyChooseTitle": "Pourquoi choisir TourPet?",
+    "certifiedTitle": "Certifié et assuré",
+    "certifiedDesc": "Tous nos soignants sont professionnellement formés, certifiés et entièrement assurés pour votre tranquillité d'esprit.",
+    "backgroundTitle": "Vérification des antécédents",
+    "backgroundDesc": "Chaque membre de l'équipe fait l'objet d'une vérification approfondie des antécédents pour garantir la sécurité de votre animal.",
+    "petLoversTitle": "Véritables amoureux des animaux",
+    "petLoversDesc": "Nous ne faisons pas seulement un travail - nous sommes des passionnés de chiens qui traitent votre animal comme un membre de la famille."
+  },
+  "settings": {
+    "title": "Paramètres",
+    "subtitle": "Personnalisez votre expérience",
+    "languageSettings": "Paramètres de langue",
+    "selectLanguage": "Sélectionnez votre langue préférée",
+    "saveButton": "Enregistrer les paramètres",
+    "cancelButton": "Annuler"
+  }
+}

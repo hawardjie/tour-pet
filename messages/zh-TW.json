@@ -1,0 +1,67 @@
+{
+  "common": {
+    "home": "首頁",
+    "breeds": "犬種",
+    "services": "服務",
+    "about": "關於",
+    "contact": "聯絡",
+    "language": "語言",
+    "settings": "設定"
+  },
+  "home": {
+    "title": "歡迎來到爪護理",
+    "subtitle": "您值得信賴的狗狗護理夥伴",
+    "description": "專業的狗狗護理服務、全面的犬種資訊，以及為愛狗人士提供的專家建議。",
+    "exploreBreedsButton": "探索犬種",
+    "viewServicesButton": "檢視服務",
+    "whyChooseUs": "為什麼選擇爪護理？",
+    "experiencedTitle": "經驗豐富的專業人員",
+    "experiencedDesc": "我們的團隊由認證的狗狗護理專家組成",
+    "safetyTitle": "安全第一",
+    "safetyDesc": "您寵物的安全是我們的首要任務",
+    "comprehensiveTitle": "全面護理",
+    "comprehensiveDesc": "從基本需求到專業護理"
+  },
+  "breeds": {
+    "title": "犬種百科全書",
+    "subtitle": "探索25+熱門犬種的全面資訊",
+    "searchPlaceholder": "搜尋犬種...",
+    "filterAll": "所有犬種",
+    "filterSize": "按體型篩選",
+    "filterGroup": "按類別篩選",
+    "size": "體型",
+    "group": "類別",
+    "origin": "起源",
+    "lifespan": "壽命",
+    "temperament": "性格",
+    "exercise": "運動需求",
+    "grooming": "美容需求",
+    "training": "訓練難度",
+    "goodWith": "適合",
+    "characteristics": "特徵",
+    "careNotes": "護理注意事項"
+  },
+  "services": {
+    "title": "我們的狗狗護理服務",
+    "subtitle": "為您毛茸茸的家庭成員提供專業、充滿愛的護理",
+    "bookButton": "預訂服務",
+    "backToHome": "返回首頁",
+    "dogSitting": "狗狗看護",
+    "dogWalking": "遛狗服務",
+    "whyChooseTitle": "為什麼選擇爪護理？",
+    "certifiedTitle": "認證與保險",
+    "certifiedDesc": "我們所有的護理人員都經過專業培訓、認證，並擁有全額保險，讓您安心無憂。",
+    "backgroundTitle": "背景審查",
+    "backgroundDesc": "每位團隊成員都經過嚴格的背景審查，確保您寵物的安全和保障。",
+    "petLoversTitle": "真正的寵物愛好者",
+    "petLoversDesc": "我們不僅僅是在工作 - 我們是充滿熱情的愛狗人士，將您的寵物視為家人。"
+  },
+  "settings": {
+    "title": "設定",
+    "subtitle": "個人化您的體驗",
+    "languageSettings": "語言設定",
+    "selectLanguage": "選擇您的偏好語言",
+    "saveButton": "儲存設定",
+    "cancelButton": "取消"
+  }
+}
