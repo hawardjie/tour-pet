@@ -9,7 +9,11 @@ export default createMiddleware({
   defaultLocale: 'en',
 
   // Always use locale prefix for consistency
-  localePrefix: 'always'
+  localePrefix: 'always',
+
+  // Enable automatic locale detection from Accept-Language header
+  // This will detect the browser's preferred language and redirect accordingly
+  localeDetection: true
 });
 
 export const config = {
