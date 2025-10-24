@@ -2,7 +2,11 @@ import { notFound } from 'next/navigation';
 import Link from 'next/link';
 import Image from 'next/image';
 import { getTranslations } from 'next-intl/server';
+import Navigation from '@/components/Navigation';
+import Footer from '@/components/Footer';
 import { dogBreeds } from '@/data/breeds';
+import { getBreedGrowthData } from '@/data/breedGrowth';
+import BreedGrowthCharts from '@/components/BreedGrowthCharts';
 
 interface PageProps {
   params: Promise<{ id: string; locale: string }>;
@@ -24,6 +28,9 @@ export default async function BreedDetailPage({ params }: PageProps) {
 
   const t = await getTranslations();
 
+  // Get growth data for this breed
+  const growthData = getBreedGrowthData(id);
+
   // Helper function to get size/group translation keys
   const getKey = (value: string): string => {
     return value.replace(/[\s-]+/g, '');
@@ -32,14 +39,7 @@ export default async function BreedDetailPage({ params }: PageProps) {
   return (
     <div className="min-h-screen bg-gray-50">
       {/* Navigation */}
-      <nav className="bg-white shadow-sm">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex justify-between items-center h-16">
-            <Link href="/" className="text-2xl font-bold text-blue-600">🐾 TourPet</Link>
-            <Link href="/breeds" className="text-gray-700 hover:text-blue-600">← {t('breedDetail.backToBreeds')}</Link>
-          </div>
-        </div>
-      </nav>
+      <Navigation />
 
       {/* Header */}
       <div className="bg-gradient-to-r from-blue-600 to-blue-700 text-white py-12 px-4">
@@ -123,6 +123,14 @@ export default async function BreedDetailPage({ params }: PageProps) {
                 ))}
               </ul>
             </div>
+
+            {/* Growth Charts - Only show if data is available */}
+            {growthData && (
+              <BreedGrowthCharts
+                growthData={growthData}
+                breedName={t(`breeds.breed_${id}_name`)}
+              />
+            )}
           </div>
 
           {/* Sidebar */}
@@ -202,6 +210,7 @@ export default async function BreedDetailPage({ params }: PageProps) {
           </div>
         </div>
       </div>
+      <Footer />
     </div>
   );
 }

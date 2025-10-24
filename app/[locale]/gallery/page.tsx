@@ -3,6 +3,8 @@
 import Link from 'next/link';
 import Image from 'next/image';
 import { useTranslations } from 'next-intl';
+import Navigation from '@/components/Navigation';
+import Footer from '@/components/Footer';
 
 export default function GalleryPage() {
   const t = useTranslations();
@@ -42,14 +44,7 @@ export default function GalleryPage() {
   return (
     <div className="min-h-screen bg-gray-50">
       {/* Navigation */}
-      <nav className="bg-white shadow-sm">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex justify-between items-center h-16">
-            <Link href="/" className="text-2xl font-bold text-blue-600">🐾 TourPet</Link>
-            <Link href="/" className="text-gray-700 hover:text-blue-600">← {t('gallery.backToHome')}</Link>
-          </div>
-        </div>
-      </nav>
+      <Navigation />
 
       {/* Header */}
       <div className="bg-gradient-to-r from-purple-600 to-pink-600 text-white py-12 px-4">
@@ -91,6 +86,7 @@ export default function GalleryPage() {
           </Link>
         </div>
       </div>
+      <Footer />
     </div>
   );
 }

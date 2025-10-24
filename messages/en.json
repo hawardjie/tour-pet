@@ -6,7 +6,13 @@
     "about": "About",
     "contact": "Contact",
     "language": "Language",
-    "settings": "Settings"
+    "settings": "Settings",
+    "loading": "Loading...",
+    "previous": "Previous",
+    "next": "Next",
+    "cancel": "Cancel",
+    "yes": "Yes",
+    "no": "No"
   },
   "home": {
     "title": "Your Complete Dog Care Companion",
@@ -1949,48 +1955,41 @@
     "viewCompleteFAQ": "→ View Complete FAQ"
   },
   "booking": {
-    "title": "Book a Service",
-    "subtitle": "Fill out the form below and we'll get back to you within 24 hours",
-    "startBooking": "Start Booking",
-    "viewServices": "View Services",
-    "backToServices": "Back to Services",
-    "serviceType": "Service Type *",
-    "dogSitting": "🏠 Dog Sitting",
-    "dogSittingDesc": "In-home or overnight care",
-    "dogWalking": "🚶 Dog Walking",
-    "dogWalkingDesc": "Daily walks and exercise",
-    "yourInformation": "Your Information",
-    "yourName": "Your Name *",
-    "email": "Email *",
-    "phone": "Phone *",
-    "dogInformation": "Dog Information",
-    "dogName": "Dog's Name *",
-    "breed": "Breed",
-    "age": "Age (years)",
-    "serviceDetails": "Service Details",
-    "startDate": "Start Date *",
-    "endDate": "End Date *",
-    "walkDuration": "Walk Duration *",
-    "duration30": "30 minutes - $20",
-    "duration60": "60 minutes - $35",
-    "frequency": "Frequency *",
-    "once": "One-time walk",
-    "daily": "Daily walks",
-    "weekly": "Weekly package",
-    "preferredStartDate": "Preferred Start Date *",
-    "specialInstructions": "Special Instructions or Requirements",
-    "specialInstructionsPlaceholder": "Any special needs, dietary restrictions, medications, behavioral notes, etc.",
-    "submitBooking": "Submit Booking Request",
-    "contactNote": "We'll contact you within 24 hours to confirm your booking",
-    "bookingReceived": "Booking Request Received!",
-    "thankYou": "Thank you for choosing TourPet! We've received your booking request and will contact you within 24 hours to confirm the details.",
-    "whatsNext": "What's Next?",
-    "step1": "We'll review your request",
-    "step2Phone": "A team member will call you at {phone}",
-    "step3Dog": "We'll discuss any special requirements for {dogName}",
-    "step4": "Schedule a meet-and-greet (for first-time bookings)",
-    "backToHome": "Back to Home",
-    "bookAnother": "Book Another Service"
+    "requestService": "Request Service",
+    "from": "from",
+    "yourName": "Your Name",
+    "yourEmail": "Your Email",
+    "yourPhone": "Your Phone",
+    "serviceType": "Service Type",
+    "selectService": "Select a service",
+    "startDate": "Start Date",
+    "endDate": "End Date",
+    "numberOfDogs": "Number of Dogs",
+    "dogDetails": "Dog Details (optional)",
+    "dogDetailsPlaceholder": "Breed, age, temperament, special needs...",
+    "additionalMessage": "Additional Message (optional)",
+    "submitting": "Submitting...",
+    "submitRequest": "Submit Request",
+    "successTitle": "Booking Request Sent!",
+    "successMessage": "The provider will be notified by email and will respond to your request soon.",
+    "errorCreating": "Error creating booking. Please try again.",
+    "bookNow": "Book Now",
+    "viewBookings": "View Bookings",
+    "myBookings": "My Bookings",
+    "noBookings": "No bookings yet",
+    "waitingForBookings": "You'll see booking requests here when customers request your services",
+    "dates": "Dates",
+    "contact": "Contact",
+    "message": "Message",
+    "accept": "Accept",
+    "decline": "Decline",
+    "requestedOn": "Requested on",
+    "bookingStatus": "Status",
+    "statusPending": "Pending",
+    "statusAccepted": "Accepted",
+    "statusDeclined": "Declined",
+    "statusCompleted": "Completed",
+    "statusCancelled": "Cancelled"
   },
   "breedDetail": {
     "backToBreeds": "Back to Breeds",
@@ -2613,5 +2612,431 @@
     "ctaTitle": "Protect Your Dog Today",
     "ctaSubtitle": "Schedule a vaccination appointment with your veterinarian to ensure your dog stays healthy and protected.",
     "scheduleVisit": "Schedule Vet Visit"
+  },
+  "breedGrowth": {
+    "title": "Growth & Development Data",
+    "age": "Age",
+    "weight": "Weight",
+    "height": "Height",
+    "weightKg": "Weight (kg)",
+    "heightCm": "Height (cm)",
+    "dailyFood": "Daily Food",
+    "cups": "cups",
+    "cupsPerDay": "Cups per Day",
+    "weeks": "weeks",
+    "ageLabel": "Age",
+    "ageInWeeks": "Age (weeks)",
+    "growthChart": "Growth Chart",
+    "foodChart": "Food Requirements",
+    "vaccineChart": "Vaccination Schedule",
+    "weightAndHeight": "Weight & Height Development",
+    "dailyFoodRequirements": "Daily Food Requirements",
+    "vaccinationSchedule": "Vaccination Schedule",
+    "growthChartDescription": "Track your dog's typical growth from puppy to senior years. Individual dogs may vary.",
+    "foodChartDescription": "Recommended daily food portions based on age. Adjust for activity level and body condition.",
+    "vaccineChartDescription": "Essential vaccination timeline to protect your dog throughout their life.",
+    "puppy": "Puppy",
+    "adolescent": "Adolescent",
+    "adult": "Adult",
+    "senior": "Senior",
+    "importance_critical": "Critical",
+    "importance_recommended": "Recommended",
+    "importance_optional": "Optional",
+    "critical": "Critical",
+    "recommended": "Recommended",
+    "optional": "Optional",
+    "nutritionNotes": "Nutrition Notes",
+    "vaccineList": "Detailed Vaccine Schedule",
+    "vaccine": "Vaccine"
+  },
+  "auth": {
+    "signIn": "Sign In",
+    "signUp": "Sign Up",
+    "signOut": "Sign Out",
+    "email": "Email",
+    "password": "Password",
+    "confirmPassword": "Confirm Password",
+    "fullName": "Full Name",
+    "createAccount": "Create Account",
+    "alreadyHaveAccount": "Already have an account?",
+    "noAccount": "Don't have an account?",
+    "invalidCredentials": "Invalid email or password",
+    "errorOccurred": "An error occurred. Please try again.",
+    "passwordsDoNotMatch": "Passwords do not match",
+    "passwordTooShort": "Password must be at least 6 characters",
+    "emailAlreadyExists": "This email is already registered",
+    "signingIn": "Signing in...",
+    "creatingAccount": "Creating account...",
+    "orContinueWith": "Or continue with",
+    "demoMode": "Demo mode: {provider} sign-in is not configured. Please use email/password authentication."
+  },
+  "provider": {
+    "becomeProvider": "Become a Provider",
+    "findProviders": "Find Providers",
+    "findProvidersDesc": "Connect with trusted dog sitters and walkers in your area",
+    "searchPlaceholder": "Search by city, zip code, or neighborhood...",
+    "search": "Search",
+    "filters": "Filters",
+    "clearAll": "Clear All",
+    "clearFilters": "Clear Filters",
+    "serviceType": "Service Type",
+    "allServices": "All Services",
+    "dogSitting": "Dog Sitting",
+    "dogWalking": "Dog Walking",
+    "priceRange": "Price Range",
+    "minPrice": "Min Price",
+    "maxPrice": "Max Price",
+    "maxDistance": "Max Distance",
+    "anyDistance": "Any Distance",
+    "miles": "miles",
+    "providersFound": "providers found",
+    "noProvidersFound": "No providers found",
+    "tryDifferentFilters": "Try adjusting your filters to see more results",
+    "startingAt": "Starting at",
+    "reviews": "reviews",
+    "dropOffAvailable": "Drop-off Available",
+    "servicesWithin": "Services within",
+    "viewProfile": "View Profile",
+    "registerDescription": "Join our network of trusted pet care providers",
+    "basicInfo": "Basic Information",
+    "services": "Services",
+    "serviceArea": "Service Area",
+    "availability": "Availability",
+    "fullName": "Full Name",
+    "phone": "Phone Number",
+    "bio": "About You",
+    "bioPlaceholder": "Tell pet owners about your experience with dogs, your home, yard, and why you love caring for pets...",
+    "bioHelp": "A good bio helps pet owners feel confident choosing you",
+    "fillAllFields": "Please fill in all required fields",
+    "selectAtLeastOneService": "Please select at least one service to offer",
+    "fillLocationFields": "Please fill in all location fields",
+    "dogSittingService": "Professional dog sitting in my home",
+    "dogWalkingService": "Dog walking service in your neighborhood",
+    "errorSavingProfile": "Error saving your profile. Please try again.",
+    "servicesOffered": "Services Offered",
+    "pricePerDay": "Price per Day",
+    "pricePerWalk": "Price per Walk",
+    "serviceDescription": "Service Description (Optional)",
+    "sittingDescPlaceholder": "e.g., I have a fenced yard, experience with senior dogs, etc.",
+    "walkingDescPlaceholder": "e.g., 30-minute walks, available for group walks, etc.",
+    "neighborhood": "Neighborhood/Area",
+    "city": "City",
+    "zipCode": "Zip Code",
+    "serviceRadius": "How far will you travel?",
+    "milesRadius": "Up to {{miles}} miles from my location",
+    "offersDropOff": "I also accept drop-off at my location",
+    "selectAvailableDays": "Select the days you're typically available",
+    "monday": "Monday",
+    "tuesday": "Tuesday",
+    "wednesday": "Wednesday",
+    "thursday": "Thursday",
+    "friday": "Friday",
+    "saturday": "Saturday",
+    "sunday": "Sunday",
+    "submitting": "Submitting...",
+    "completeRegistration": "Complete Registration",
+    "dashboard": "Provider Dashboard",
+    "managingProfile": "Manage your provider profile and services",
+    "myProfile": "My Profile",
+    "profileStatus": "Profile Status",
+    "verified": "Verified",
+    "pending": "Pending Verification",
+    "editProfile": "Edit Profile",
+    "profileDetails": "Profile Details",
+    "contactInfo": "Contact Information",
+    "dropOffService": "Drop-off Service",
+    "radius": "Radius",
+    "profileUpdated": "Profile updated successfully!",
+    "errorUpdating": "Error updating profile",
+    "saving": "Saving...",
+    "saveChanges": "Save Changes",
+    "providerNotFound": "Provider not found",
+    "backToSearch": "Back to Search",
+    "about": "About",
+    "servicesAndPricing": "Services & Pricing",
+    "perDay": "per day",
+    "perSession": "per session",
+    "bookService": "Book Service",
+    "bookingFeatureComingSoon": "Booking feature coming soon! Please contact the provider directly.",
+    "available": "Available",
+    "unavailable": "Unavailable",
+    "sampleReviewer1": "Jennifer M.",
+    "sampleReviewer2": "Robert K.",
+    "sampleReviewer3": "Amanda S.",
+    "weeksAgo": "weeks ago",
+    "monthAgo": "month ago",
+    "sampleReview1": "Absolutely wonderful experience! Very professional and my dog was so happy. Will definitely book again!",
+    "sampleReview2": "Great service and very reliable. Good communication and my pup always comes home tired and happy.",
+    "sampleReview3": "Highly recommend! You can tell they genuinely love dogs. My anxious rescue felt comfortable immediately."
+  },
+  "terms": {
+    "title": "Terms of Service",
+    "lastUpdated": "Last Updated",
+    "section1": {
+      "title": "1. Acceptance of Terms",
+      "p1": "By accessing or using TourPet (\"the Platform\", \"we\", \"us\", or \"our\"), you agree to be bound by these Terms of Service. If you do not agree to these terms, you may not use our services.",
+      "p2": "These Terms constitute a legally binding agreement between you and TourPet. Your continued use of the Platform constitutes acceptance of any modifications to these Terms."
+    },
+    "section2": {
+      "title": "2. Service Description",
+      "p1": "TourPet is an online platform that connects pet owners with independent pet care service providers. We are a marketplace platform only and do not directly provide pet care services.",
+      "p2": "All services are provided by independent third-party providers. TourPet does not employ pet care providers and is not responsible for their actions, services, or conduct."
+    },
+    "section3": {
+      "title": "3. User Accounts and Registration",
+      "p1": "To use certain features, you must create an account. You agree to:",
+      "list": {
+        "item1": "Provide accurate, current, and complete information during registration",
+        "item2": "Maintain the security of your account credentials",
+        "item3": "Accept responsibility for all activities under your account",
+        "item4": "Notify us immediately of any unauthorized access or security breaches"
+      }
+    },
+    "section4": {
+      "title": "4. Platform Role and Disclaimer",
+      "p1": "IMPORTANT: TOURPET IS A MARKETPLACE PLATFORM ONLY",
+      "p2": "We provide a platform for connecting pet owners with service providers. We do not: (a) employ or directly contract with service providers; (b) conduct background checks or verify provider qualifications; (c) supervise, direct, or control providers' work; (d) guarantee the quality, safety, or legality of services provided.",
+      "p3": "Any arrangements, agreements, or transactions are solely between you and the service provider. TourPet is not a party to these agreements and bears no responsibility for services rendered."
+    },
+    "section5": {
+      "title": "5. User Responsibilities",
+      "p1": "Users agree to comply with all applicable laws and regulations. Specific responsibilities include:",
+      "providers": {
+        "title": "For Service Providers:",
+        "item1": "Maintain all necessary licenses, permits, insurance, and qualifications required by law",
+        "item2": "Provide services professionally and safely",
+        "item3": "Maintain liability insurance covering your services",
+        "item4": "Comply with all local, state, and federal regulations regarding pet care services"
+      },
+      "customers": {
+        "title": "For Pet Owners:",
+        "item1": "Provide accurate information about your pet's health, behavior, and special needs",
+        "item2": "Ensure your pet is properly vaccinated and licensed as required by law",
+        "item3": "Disclose any aggressive behavior or health conditions",
+        "item4": "Obtain your own insurance coverage as needed"
+      }
+    },
+    "section6": {
+      "title": "6. Limitation of Liability",
+      "p1": "TO THE MAXIMUM EXTENT PERMITTED BY LAW, TOURPET SHALL NOT BE LIABLE FOR:",
+      "list": {
+        "item1": "Any injuries, death, or harm to pets resulting from services provided by third-party providers",
+        "item2": "Property damage, theft, or loss occurring during service provision",
+        "item3": "Actions, omissions, negligence, or misconduct of service providers or customers",
+        "item4": "Disputes between providers and customers",
+        "item5": "Inaccurate, incomplete, or fraudulent information provided by users",
+        "item6": "Any indirect, incidental, special, consequential, or punitive damages"
+      }
+    },
+    "section7": {
+      "title": "7. Indemnification",
+      "p1": "You agree to indemnify, defend, and hold harmless TourPet, its officers, directors, employees, and agents from any claims, damages, losses, liabilities, and expenses (including attorney fees) arising from: (a) your use of the Platform; (b) services you provide or receive through the Platform; (c) your violation of these Terms; (d) your violation of any rights of another party; or (e) any injury, death, or damage to pets or property."
+    },
+    "section8": {
+      "title": "8. Third-Party Services and Links",
+      "p1": "Our Platform integrates with third-party services including:",
+      "list": {
+        "item1": "Authentication providers (Google, Facebook, Apple, Microsoft, GitHub, Twitter)",
+        "item2": "Email services (Resend)"
+      },
+      "p2": "We are not responsible for the privacy practices, content, or terms of service of these third-party providers. Your use of third-party services is governed by their respective terms and policies."
+    },
+    "section9": {
+      "title": "9. Payments and Fees",
+      "p1": "All payment terms, pricing, and fees are agreed upon directly between service providers and customers. TourPet does not process payments or take commissions at this time.",
+      "p2": "Any future fees for Platform usage will be clearly communicated with advance notice."
+    },
+    "section10": {
+      "title": "10. Prohibited Conduct",
+      "p1": "Users may not:",
+      "list": {
+        "item1": "Provide false, inaccurate, or misleading information",
+        "item2": "Impersonate any person or entity",
+        "item3": "Engage in fraudulent, illegal, or harmful activities",
+        "item4": "Harass, abuse, or harm other users",
+        "item5": "Violate any applicable laws or regulations",
+        "item6": "Circumvent or manipulate Platform features or security measures"
+      }
+    },
+    "section11": {
+      "title": "11. Termination",
+      "p1": "We reserve the right to suspend or terminate your account at any time, with or without cause, with or without notice. Upon termination, your right to use the Platform ceases immediately. Sections regarding liability limitations, indemnification, and dispute resolution survive termination."
+    },
+    "section12": {
+      "title": "12. Dispute Resolution and Arbitration",
+      "p1": "Any disputes arising from these Terms or your use of the Platform shall be resolved through binding arbitration, except where prohibited by law. You waive your right to a jury trial and to participate in class action lawsuits.",
+      "p2": "If arbitration is unavailable, disputes shall be resolved in courts located in California, and you consent to personal jurisdiction there."
+    },
+    "section13": {
+      "title": "13. Changes to Terms",
+      "p1": "We reserve the right to modify these Terms at any time. Material changes will be posted on the Platform with an updated 'Last Updated' date. Your continued use after changes constitutes acceptance of modified Terms."
+    },
+    "section14": {
+      "title": "14. Governing Law",
+      "p1": "These Terms are governed by the laws of California, without regard to conflict of law provisions."
+    },
+    "section15": {
+      "title": "15. Contact Information",
+      "p1": "For questions about these Terms, contact us at:"
+    },
+    "footer": "By using TourPet, you acknowledge that you have read, understood, and agree to be bound by these Terms of Service."
+  },
+  "privacy": {
+    "title": "Privacy Policy",
+    "lastUpdated": "Last Updated",
+    "intro": {
+      "p1": "At TourPet (\"we\", \"us\", or \"our\"), we are committed to protecting your privacy and personal information. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you use our Platform and services. Please read this policy carefully to understand our practices regarding your personal data.",
+      "p2": "By using our Platform, you consent to the data practices described in this Privacy Policy. If you do not agree with the terms of this Privacy Policy, please do not access or use the Platform."
+    },
+    "section1": {
+      "title": "1. Information We Collect",
+      "sub1": {
+        "title": "Information You Provide Directly:",
+        "item1": "Personal identification information (name, email address, phone number, postal address, date of birth)",
+        "item2": "Account credentials (username, password)",
+        "item3": "Profile information (profile pictures, bio, description of services offered)",
+        "item4": "Pet information (pet names, breeds, ages, medical conditions, behavioral information, photos)"
+      },
+      "sub2": {
+        "title": "Information Collected Automatically:",
+        "item1": "Device information (IP address, browser type, operating system, device identifiers, mobile network information)",
+        "item2": "Usage information (pages viewed, features used, time spent, click patterns, referring/exit pages)",
+        "item3": "Location information (approximate location derived from IP address, precise location if you grant permission)"
+      },
+      "sub3": {
+        "title": "Information From Third Parties:",
+        "p1": "We may receive information about you from third parties including:",
+        "item1": "Social media platforms when you connect your account or use social login features (Google, Facebook, Apple, Microsoft, GitHub, Twitter)",
+        "item2": "Identity verification services if we implement verification processes",
+        "item3": "Payment processors regarding payment transactions",
+        "item4": "Public databases and commercially available sources",
+        "item5": "Background check providers (for service providers)",
+        "item6": "Other users who provide information about you (such as references or reviews)"
+      }
+    },
+    "section2": {
+      "title": "2. How We Use Your Information",
+      "item1": "To provide, maintain, and improve our Platform and services",
+      "item2": "To create and manage your account and facilitate connections between pet owners and service providers",
+      "item3": "To process payments and transactions",
+      "item4": "To communicate with you about your account, bookings, and services",
+      "item5": "To send administrative information, updates, and security alerts",
+      "item6": "To personalize your experience and deliver targeted content",
+      "item7": "To detect, prevent, and address fraud, security issues, and illegal activities"
+    },
+    "section3": {
+      "title": "3. How We Share Your Information",
+      "p1": "We may share your information in the following circumstances:",
+      "sub1": {
+        "title": "With Other Users:",
+        "item1": "Profile information, pet information, and service details are visible to users you interact with through the Platform",
+        "item2": "Reviews and ratings you provide may be publicly visible"
+      },
+      "sub2": {
+        "title": "With Service Providers:",
+        "item1": "Payment processing companies",
+        "item2": "Hosting and cloud storage providers",
+        "item3": "Analytics and customer service platforms"
+      },
+      "sub3": {
+        "title": "For Legal Purposes:",
+        "p1": "When required by law, court order, or governmental authority, or when we believe disclosure is necessary to protect our rights, safety, or property, or that of users or the public."
+      }
+    },
+    "section4": {
+      "title": "4. Third-Party Services and Social Login",
+      "p1": "We integrate with various third-party services and authentication providers:",
+      "google": "Google Sign-In and Services: When you use Google authentication or Google services integrated into our Platform, Google may collect information about your use in accordance with Google's Privacy Policy. We receive basic profile information (name, email, profile picture) that you authorize Google to share with us.",
+      "facebook": "Facebook Login: When you use Facebook Login, we receive information you authorize Facebook to share with us, which may include your name, email address, profile picture, and friend list. Facebook's data collection and use is governed by Facebook's Data Policy.",
+      "apple": "Sign in with Apple: When you use Sign in with Apple, Apple provides us with a unique identifier and, at your option, your name and a private relay email address. Apple's Privacy Policy governs their data practices.",
+      "microsoft": "Microsoft Account: When you sign in with Microsoft, we receive information you authorize Microsoft to share, including your name and email address. Microsoft's Privacy Statement applies to their data handling.",
+      "github": "GitHub OAuth: When you authenticate with GitHub, we receive your GitHub username, email address, and public profile information as authorized by you. GitHub's Privacy Statement governs their data practices.",
+      "twitter": "Twitter/X Login: If you authenticate using Twitter/X, we receive basic profile information you authorize Twitter/X to share. Their Privacy Policy applies to their data collection and use.",
+      "resend": "Resend Email Service: We use Resend to send transactional and marketing emails. Resend processes your email address and email content in accordance with their Privacy Policy. They act as our data processor and are contractually obligated to protect your information.",
+      "p2": "Important Note: When you use third-party authentication services, you should review the privacy policies and terms of service of those providers. We are not responsible for the privacy practices of third parties. You can revoke our access to your third-party accounts at any time through your account settings with those providers."
+    },
+    "section5": {
+      "title": "5. Cookies and Tracking Technologies",
+      "p1": "We use cookies, web beacons, pixels, and similar tracking technologies to collect information about your browsing activities. We use the following types of cookies:",
+      "item1": "Essential cookies: Necessary for the Platform to function properly",
+      "item2": "Functional cookies: Remember your preferences and settings",
+      "item3": "Analytics cookies: Help us understand how users interact with the Platform",
+      "p2": "You can control cookies through your browser settings, but disabling cookies may limit your ability to use certain features of the Platform. We also use third-party analytics services like Google Analytics, which use cookies to collect and analyze information about Platform usage."
+    },
+    "section6": {
+      "title": "6. Data Security",
+      "p1": "We implement reasonable administrative, technical, and physical security measures designed to protect your information from unauthorized access, disclosure, alteration, and destruction. These measures include encryption of data in transit and at rest, secure server infrastructure, access controls, and regular security assessments. However, no method of transmission over the internet or electronic storage is 100% secure. While we strive to protect your personal information, we cannot guarantee absolute security. You are responsible for maintaining the confidentiality of your account credentials and for all activities under your account."
+    },
+    "section7": {
+      "title": "7. Your Rights and Choices (GDPR Compliance)",
+      "p1": "Depending on your location and applicable law, you may have the following rights regarding your personal information:",
+      "access": {
+        "title": "Right to Access",
+        "desc": "You can request a copy of the personal information we hold about you"
+      },
+      "rectification": {
+        "title": "Right to Rectification",
+        "desc": "You can request that we correct inaccurate or incomplete information"
+      },
+      "erasure": {
+        "title": "Right to Erasure (Right to be Forgotten)",
+        "desc": "You can request deletion of your personal information, subject to certain exceptions"
+      },
+      "restriction": {
+        "title": "Right to Restriction of Processing",
+        "desc": "You can request that we limit how we use your information"
+      },
+      "portability": {
+        "title": "Right to Data Portability",
+        "desc": "You can request to receive your information in a structured, machine-readable format"
+      },
+      "objection": {
+        "title": "Right to Object",
+        "desc": "You can object to our processing of your information for certain purposes, including direct marketing"
+      },
+      "p2": "To exercise any of these rights, please contact us using the information provided below. We will respond to your request within the timeframe required by applicable law."
+    },
+    "section8": {
+      "title": "8. California Privacy Rights (CCPA/CPRA Compliance)",
+      "p1": "If you are a California resident, the California Consumer Privacy Act (CCPA) as amended by the California Privacy Rights Act (CPRA) provides you with specific rights regarding your personal information:",
+      "item1": "Right to Know: You have the right to request disclosure of the categories and specific pieces of personal information we have collected about you",
+      "item2": "Right to Delete: You have the right to request deletion of your personal information, subject to certain exceptions",
+      "item3": "Right to Opt-Out: You have the right to opt-out of the sale or sharing of your personal information for targeted advertising"
+    },
+    "section9": {
+      "title": "9. Children's Privacy",
+      "p1": "Our Platform is not intended for children under the age of 18 (or under 13 in the United States). We do not knowingly collect personal information from children under the applicable age threshold. If you are a parent or guardian and believe your child has provided us with personal information, please contact us immediately, and we will take steps to delete such information."
+    },
+    "section10": {
+      "title": "10. International Data Transfers",
+      "p1": "Your information may be transferred to, stored, and processed in countries other than your country of residence, including the United States and other countries where our service providers operate. These countries may have data protection laws that differ from the laws of your country. We take appropriate measures to ensure your information receives adequate protection."
+    },
+    "section11": {
+      "title": "11. Data Retention",
+      "p1": "We retain your personal information for as long as necessary to fulfill the purposes outlined in this Privacy Policy, unless a longer retention period is required or permitted by law. The retention period depends on the type of information and the purposes for which we use it. When we no longer need your information, we will securely delete or anonymize it."
+    },
+    "section12": {
+      "title": "12. Changes to This Privacy Policy",
+      "p1": "We reserve the right to modify this Privacy Policy at any time. When we make changes, we will update the \"Last Updated\" date at the top of this policy. If we make material changes that significantly affect your privacy rights, we will provide notice through the Platform, via email, or through other prominent means before the changes take effect. Your continued use of the Platform after changes become effective constitutes acceptance of the updated Privacy Policy."
+    },
+    "section13": {
+      "title": "13. Contact Us and Data Protection Officer",
+      "p1": "If you have any questions, concerns, or complaints about this Privacy Policy or our data practices, or if you wish to exercise your privacy rights, please contact us at:"
+    },
+    "footer": "This Privacy Policy is effective as of the date listed above and applies to all information collected through the Platform and any related services. By using TourPet, you acknowledge that you have read and understood this Privacy Policy and consent to the collection, use, and disclosure of your information as described herein."
+  },
+  "footer": {
+    "description": "Connecting pet owners with trusted local pet care providers. Find dog walkers, pet sitters, and boarding services in your area.",
+    "quickLinks": "Quick Links",
+    "home": "Home",
+    "findProviders": "Find Providers",
+    "becomeProvider": "Become a Provider",
+    "dogBreeds": "Dog Breeds",
+    "faq": "FAQ",
+    "legal": "Legal",
+    "terms": "Terms of Service",
+    "privacy": "Privacy Policy",
+    "contact": "Contact Us",
+    "copyright": "All rights reserved."
   }
 }

@@ -2,6 +2,7 @@ import { NextIntlClientProvider } from 'next-intl';
 import { getMessages } from 'next-intl/server';
 import { notFound } from 'next/navigation';
 import { locales } from '@/i18n';
+import AuthContext from '@/lib/auth-context';
 
 export function generateStaticParams() {
   return locales.map((locale) => ({ locale }));
@@ -25,8 +26,10 @@ export default async function LocaleLayout({
   const messages = await getMessages();
 
   return (
-    <NextIntlClientProvider messages={messages}>
-      {children}
-    </NextIntlClientProvider>
+    <AuthContext>
+      <NextIntlClientProvider messages={messages}>
+        {children}
+      </NextIntlClientProvider>
+    </AuthContext>
   );
 }

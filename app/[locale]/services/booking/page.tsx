@@ -4,6 +4,8 @@ import { useState } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import { useTranslations } from 'next-intl';
+import Navigation from '@/components/Navigation';
+import Footer from '@/components/Footer';
 
 export default function BookingPage() {
   const t = useTranslations();
@@ -40,13 +42,7 @@ export default function BookingPage() {
   if (submitted) {
     return (
       <div className="min-h-screen bg-gray-50">
-        <nav className="bg-white shadow-sm">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="flex justify-between items-center h-16">
-              <Link href="/" className="text-2xl font-bold text-blue-600">🐾 TourPet</Link>
-            </div>
-          </div>
-        </nav>
+        <Navigation />
 
         <div className="max-w-2xl mx-auto px-4 py-16 text-center">
           <div className="bg-white rounded-lg shadow-lg p-12">
@@ -84,14 +80,7 @@ export default function BookingPage() {
   return (
     <div className="min-h-screen bg-gray-50">
       {/* Navigation */}
-      <nav className="bg-white shadow-sm">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex justify-between items-center h-16">
-            <Link href="/" className="text-2xl font-bold text-blue-600">🐾 TourPet</Link>
-            <Link href="/services" className="text-gray-700 hover:text-blue-600">← {t('booking.backToServices')}</Link>
-          </div>
-        </div>
-      </nav>
+      <Navigation />
 
       {/* Hero Section */}
       <section className="relative h-[600px] flex items-center justify-center overflow-hidden">
@@ -99,7 +88,7 @@ export default function BookingPage() {
           src="https://images.unsplash.com/photo-1450778869180-41d0601e046e?w=1920&h=600&fit=crop&crop=faces"
           alt="Book a Service"
           fill
-          className="object-cover object-center brightness-50"
+          className="object-cover object-center brightness-80"
           priority
           sizes="100vw"
         />
@@ -378,6 +367,7 @@ export default function BookingPage() {
           </div>
         </form>
       </div>
+      <Footer />
     </div>
   );
 }

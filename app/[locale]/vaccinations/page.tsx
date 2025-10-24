@@ -3,6 +3,8 @@
 import { useState } from 'react';
 import Link from 'next/link';
 import { useTranslations } from 'next-intl';
+import Navigation from '@/components/Navigation';
+import Footer from '@/components/Footer';
 import {
   puppyVaccinationSchedule,
   coreVaccines,
@@ -24,14 +26,7 @@ export default function VaccinationsPage() {
   return (
     <div className="min-h-screen bg-gray-50">
       {/* Navigation */}
-      <nav className="bg-white shadow-sm">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex justify-between items-center h-16">
-            <Link href="/" className="text-2xl font-bold text-blue-600">🐾 TourPet</Link>
-            <Link href="/" className="text-gray-700 hover:text-blue-600">← {t('vaccinations.backToHome')}</Link>
-          </div>
-        </div>
-      </nav>
+      <Navigation />
 
       {/* Hero Section */}
       <section className="bg-gradient-to-r from-purple-600 to-indigo-600 text-white py-20">
@@ -439,6 +434,7 @@ export default function VaccinationsPage() {
           </Link>
         </div>
       </section>
+      <Footer />
     </div>
   );
 }
