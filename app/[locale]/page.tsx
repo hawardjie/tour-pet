@@ -8,7 +8,7 @@ export default function Home() {
   const t = useTranslations();
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-blue-50 to-white">
+    <div className="min-h-screen bg-gradient-to-b from-blue-50 to-white dark:from-gray-800 dark:to-gray-900">
       <Navigation />
 
       {/* Hero Section with Background Image */}
@@ -32,7 +32,7 @@ export default function Home() {
             <Link href="/services/booking" className="bg-blue-600 text-white px-6 sm:px-8 py-3 rounded-lg font-semibold hover:bg-blue-700 transition shadow-lg text-sm sm:text-base">
               {t('home.bookService')}
             </Link>
-            <Link href="/breeds" className="bg-white text-blue-600 border-2 border-white px-6 sm:px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition shadow-lg text-sm sm:text-base">
+            <Link href="/breeds" className="bg-white text-blue-600 border-2 border-white px-6 sm:px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 dark:bg-gray-800 dark:hover:bg-gray-700 transition shadow-lg text-sm sm:text-base">
               {t('home.exploreBreeds')}
             </Link>
           </div>
@@ -40,10 +40,10 @@ export default function Home() {
       </section>
 
       {/* Photo Gallery */}
-      <section className="py-12 sm:py-16 px-4 bg-white">
+      <section className="py-12 sm:py-16 px-4 bg-white dark:bg-gray-900">
         <div className="max-w-7xl mx-auto">
-          <h2 className="text-2xl sm:text-3xl font-bold text-center text-gray-900 mb-3 sm:mb-4">{t('home.meetOurDogs')}</h2>
-          <p className="text-sm sm:text-base text-center text-gray-600 mb-8 sm:mb-12 px-4">{t('home.meetOurDogsDesc')}</p>
+          <h2 className="text-2xl sm:text-3xl font-bold text-center text-gray-900 dark:text-white mb-3 sm:mb-4">{t('home.meetOurDogs')}</h2>
+          <p className="text-sm sm:text-base text-center text-gray-600 dark:text-gray-300 mb-8 sm:mb-12 px-4">{t('home.meetOurDogsDesc')}</p>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-3 sm:gap-4">
             <div className="relative h-40 sm:h-56 md:h-64 rounded-lg overflow-hidden shadow-md hover:shadow-xl transition">
               <Image
@@ -122,11 +122,11 @@ export default function Home() {
       </section>
 
       {/* Services Overview with Images */}
-      <section className="py-12 sm:py-16 px-4 bg-gray-50">
+      <section className="py-12 sm:py-16 px-4 bg-gray-50 dark:bg-gray-800">
         <div className="max-w-7xl mx-auto">
-          <h2 className="text-2xl sm:text-3xl font-bold text-center text-gray-900 mb-8 sm:mb-12">{t('home.ourServices')}</h2>
+          <h2 className="text-2xl sm:text-3xl font-bold text-center text-gray-900 dark:text-white mb-8 sm:mb-12">{t('home.ourServices')}</h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
-            <div className="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-xl transition">
+            <div className="bg-white dark:bg-gray-900 rounded-lg overflow-hidden shadow-md hover:shadow-xl transition">
               <div className="relative h-48 sm:h-52">
                 <Image
                   src="https://images.unsplash.com/photo-1548199973-03cce0bbc87b?w=400&h=300&fit=crop&crop=faces"
@@ -137,8 +137,8 @@ export default function Home() {
                 />
               </div>
               <div className="p-5 sm:p-6">
-                <h3 className="text-lg sm:text-xl font-semibold text-gray-900 mb-2">{t('home.dogSitting')}</h3>
-                <p className="text-sm sm:text-base text-gray-600 mb-3 sm:mb-4">
+                <h3 className="text-lg sm:text-xl font-semibold text-gray-900 dark:text-white mb-2">{t('home.dogSitting')}</h3>
+                <p className="text-sm sm:text-base text-gray-600 dark:text-gray-300 mb-3 sm:mb-4">
                   {t('home.dogSittingDesc')}
                 </p>
                 <Link href="/services/sitting" className="text-blue-600 hover:text-blue-700 font-medium text-sm sm:text-base inline-block">
@@ -147,7 +147,7 @@ export default function Home() {
               </div>
             </div>
 
-            <div className="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-xl transition">
+            <div className="bg-white dark:bg-gray-900 rounded-lg overflow-hidden shadow-md hover:shadow-xl transition">
               <div className="relative h-48">
                 <Image
                   src="https://images.unsplash.com/photo-1541364983171-a8ba01e95cfc?w=400&h=300&fit=crop&crop=faces"
@@ -158,8 +158,8 @@ export default function Home() {
                 />
               </div>
               <div className="p-6">
-                <h3 className="text-xl font-semibold text-gray-900 mb-2">{t('home.dogWalking')}</h3>
-                <p className="text-gray-600 mb-4">
+                <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-2">{t('home.dogWalking')}</h3>
+                <p className="text-gray-600 dark:text-gray-300 mb-4">
                   {t('home.dogWalkingDesc')}
                 </p>
                 <Link href="/services/walking" className="text-blue-600 hover:text-blue-700 font-medium">
@@ -168,7 +168,7 @@ export default function Home() {
               </div>
             </div>
 
-            <div className="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-xl transition">
+            <div className="bg-white dark:bg-gray-900 rounded-lg overflow-hidden shadow-md hover:shadow-xl transition">
               <div className="relative h-48">
                 <Image
                   src="https://images.unsplash.com/photo-1450778869180-41d0601e046e?w=400&h=300&fit=crop&crop=faces"
@@ -179,8 +179,8 @@ export default function Home() {
                 />
               </div>
               <div className="p-6">
-                <h3 className="text-xl font-semibold text-gray-900 mb-2">{t('home.easyBooking')}</h3>
-                <p className="text-gray-600 mb-4">
+                <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-2">{t('home.easyBooking')}</h3>
+                <p className="text-gray-600 dark:text-gray-300 mb-4">
                   {t('home.easyBookingDesc')}
                 </p>
                 <Link href="/services/booking" className="text-blue-600 hover:text-blue-700 font-medium">
@@ -195,112 +195,112 @@ export default function Home() {
       {/* Knowledge Base Overview */}
       <section className="py-16 px-4">
         <div className="max-w-7xl mx-auto">
-          <h2 className="text-3xl font-bold text-center text-gray-900 mb-4">{t('home.knowledgeBase')}</h2>
-          <p className="text-center text-gray-600 mb-12 max-w-2xl mx-auto">
+          <h2 className="text-3xl font-bold text-center text-gray-900 dark:text-white mb-4">{t('home.knowledgeBase')}</h2>
+          <p className="text-center text-gray-600 dark:text-gray-300 mb-12 max-w-2xl mx-auto">
             {t('home.knowledgeBaseDesc')}
           </p>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-            <Link href="/breeds" className="p-6 bg-gradient-to-br from-blue-50 to-blue-100 rounded-lg hover:shadow-lg transition">
+            <Link href="/breeds" className="p-6 bg-gradient-to-br from-blue-50 to-blue-100 dark:from-blue-900 dark:to-blue-800 rounded-lg hover:shadow-lg transition">
               <div className="text-4xl mb-3">🐕</div>
-              <h3 className="text-lg font-semibold text-gray-900 mb-2">{t('home.breedsCardTitle')}</h3>
-              <p className="text-sm text-gray-600">
+              <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-2">{t('home.breedsCardTitle')}</h3>
+              <p className="text-sm text-gray-600 dark:text-gray-300">
                 {t('home.breedsCardDesc')}
               </p>
             </Link>
 
-            <Link href="/behavior" className="p-6 bg-gradient-to-br from-green-50 to-green-100 rounded-lg hover:shadow-lg transition">
+            <Link href="/behavior" className="p-6 bg-gradient-to-br from-green-50 to-green-100 dark:from-green-900 dark:to-green-800 rounded-lg hover:shadow-lg transition">
               <div className="text-4xl mb-3">🎭</div>
-              <h3 className="text-lg font-semibold text-gray-900 mb-2">{t('home.behaviorCardTitle')}</h3>
-              <p className="text-sm text-gray-600">
+              <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-2">{t('home.behaviorCardTitle')}</h3>
+              <p className="text-sm text-gray-600 dark:text-gray-300">
                 {t('home.behaviorCardDesc')}
               </p>
             </Link>
 
-            <Link href="/training" className="p-6 bg-gradient-to-br from-indigo-50 to-indigo-100 rounded-lg hover:shadow-lg transition">
+            <Link href="/training" className="p-6 bg-gradient-to-br from-indigo-50 to-indigo-100 dark:from-indigo-900 dark:to-indigo-800 rounded-lg hover:shadow-lg transition">
               <div className="text-4xl mb-3">🎓</div>
-              <h3 className="text-lg font-semibold text-gray-900 mb-2">{t('home.trainingCardTitle')}</h3>
-              <p className="text-sm text-gray-600">
+              <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-2">{t('home.trainingCardTitle')}</h3>
+              <p className="text-sm text-gray-600 dark:text-gray-300">
                 {t('home.trainingCardDesc')}
               </p>
             </Link>
 
-            <Link href="/nutrition" className="p-6 bg-gradient-to-br from-orange-50 to-orange-100 rounded-lg hover:shadow-lg transition">
+            <Link href="/nutrition" className="p-6 bg-gradient-to-br from-orange-50 to-orange-100 dark:from-orange-900 dark:to-orange-800 rounded-lg hover:shadow-lg transition">
               <div className="text-4xl mb-3">🥘</div>
-              <h3 className="text-lg font-semibold text-gray-900 mb-2">{t('home.nutritionCardTitle')}</h3>
-              <p className="text-sm text-gray-600">
+              <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-2">{t('home.nutritionCardTitle')}</h3>
+              <p className="text-sm text-gray-600 dark:text-gray-300">
                 {t('home.nutritionCardDesc')}
               </p>
             </Link>
 
-            <Link href="/health" className="p-6 bg-gradient-to-br from-red-50 to-red-100 rounded-lg hover:shadow-lg transition">
+            <Link href="/health" className="p-6 bg-gradient-to-br from-red-50 to-red-100 dark:from-red-900 dark:to-red-800 rounded-lg hover:shadow-lg transition">
               <div className="text-4xl mb-3">🏥</div>
-              <h3 className="text-lg font-semibold text-gray-900 mb-2">{t('home.healthCardTitle')}</h3>
-              <p className="text-sm text-gray-600">
+              <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-2">{t('home.healthCardTitle')}</h3>
+              <p className="text-sm text-gray-600 dark:text-gray-300">
                 {t('home.healthCardDesc')}
               </p>
             </Link>
 
-            <Link href="/care" className="p-6 bg-gradient-to-br from-purple-50 to-purple-100 rounded-lg hover:shadow-lg transition">
+            <Link href="/care" className="p-6 bg-gradient-to-br from-purple-50 to-purple-100 dark:from-purple-900 dark:to-purple-800 rounded-lg hover:shadow-lg transition">
               <div className="text-4xl mb-3">💝</div>
-              <h3 className="text-lg font-semibold text-gray-900 mb-2">{t('home.careCardTitle')}</h3>
-              <p className="text-sm text-gray-600">
+              <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-2">{t('home.careCardTitle')}</h3>
+              <p className="text-sm text-gray-600 dark:text-gray-300">
                 {t('home.careCardDesc')}
               </p>
             </Link>
 
-            <Link href="/service-dogs" className="p-6 bg-gradient-to-br from-teal-50 to-teal-100 rounded-lg hover:shadow-lg transition">
+            <Link href="/service-dogs" className="p-6 bg-gradient-to-br from-teal-50 to-teal-100 dark:from-teal-900 dark:to-teal-800 rounded-lg hover:shadow-lg transition">
               <div className="text-4xl mb-3">🦮</div>
-              <h3 className="text-lg font-semibold text-gray-900 mb-2">{t('home.serviceDogsCardTitle')}</h3>
-              <p className="text-sm text-gray-600">
+              <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-2">{t('home.serviceDogsCardTitle')}</h3>
+              <p className="text-sm text-gray-600 dark:text-gray-300">
                 {t('home.serviceDogsCardDesc')}
               </p>
             </Link>
 
-            <Link href="/faq" className="p-6 bg-gradient-to-br from-yellow-50 to-yellow-100 rounded-lg hover:shadow-lg transition">
+            <Link href="/faq" className="p-6 bg-gradient-to-br from-yellow-50 to-yellow-100 dark:from-yellow-900 dark:to-yellow-800 rounded-lg hover:shadow-lg transition">
               <div className="text-4xl mb-3">❓</div>
-              <h3 className="text-lg font-semibold text-gray-900 mb-2">{t('home.faqCardTitle')}</h3>
-              <p className="text-sm text-gray-600">
+              <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-2">{t('home.faqCardTitle')}</h3>
+              <p className="text-sm text-gray-600 dark:text-gray-300">
                 {t('home.faqCardDesc')}
               </p>
             </Link>
 
-            <Link href="/tools" className="p-6 bg-gradient-to-br from-cyan-50 to-cyan-100 rounded-lg hover:shadow-lg transition">
+            <Link href="/tools" className="p-6 bg-gradient-to-br from-cyan-50 to-cyan-100 dark:from-cyan-900 dark:to-cyan-800 rounded-lg hover:shadow-lg transition">
               <div className="text-4xl mb-3">🔧</div>
-              <h3 className="text-lg font-semibold text-gray-900 mb-2">{t('home.toolsCardTitle')}</h3>
-              <p className="text-sm text-gray-600">
+              <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-2">{t('home.toolsCardTitle')}</h3>
+              <p className="text-sm text-gray-600 dark:text-gray-300">
                 {t('home.toolsCardDesc')}
               </p>
             </Link>
 
-            <Link href="/microchip" className="p-6 bg-gradient-to-br from-sky-50 to-sky-100 rounded-lg hover:shadow-lg transition">
+            <Link href="/microchip" className="p-6 bg-gradient-to-br from-sky-50 to-sky-100 dark:from-sky-900 dark:to-sky-800 rounded-lg hover:shadow-lg transition">
               <div className="text-4xl mb-3">💉</div>
-              <h3 className="text-lg font-semibold text-gray-900 mb-2">{t('home.microchipCardTitle')}</h3>
-              <p className="text-sm text-gray-600">
+              <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-2">{t('home.microchipCardTitle')}</h3>
+              <p className="text-sm text-gray-600 dark:text-gray-300">
                 {t('home.microchipCardDesc')}
               </p>
             </Link>
 
-            <Link href="/adoption" className="p-6 bg-gradient-to-br from-rose-50 to-rose-100 rounded-lg hover:shadow-lg transition">
+            <Link href="/adoption" className="p-6 bg-gradient-to-br from-rose-50 to-rose-100 dark:from-rose-900 dark:to-rose-800 rounded-lg hover:shadow-lg transition">
               <div className="text-4xl mb-3">❤️</div>
-              <h3 className="text-lg font-semibold text-gray-900 mb-2">{t('home.adoptionCardTitle')}</h3>
-              <p className="text-sm text-gray-600">
+              <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-2">{t('home.adoptionCardTitle')}</h3>
+              <p className="text-sm text-gray-600 dark:text-gray-300">
                 {t('home.adoptionCardDesc')}
               </p>
             </Link>
 
-            <Link href="/lost-found" className="p-6 bg-gradient-to-br from-amber-50 to-amber-100 rounded-lg hover:shadow-lg transition">
+            <Link href="/lost-found" className="p-6 bg-gradient-to-br from-amber-50 to-amber-100 dark:from-amber-900 dark:to-amber-800 rounded-lg hover:shadow-lg transition">
               <div className="text-4xl mb-3">🔍</div>
-              <h3 className="text-lg font-semibold text-gray-900 mb-2">{t('home.lostFoundCardTitle')}</h3>
-              <p className="text-sm text-gray-600">
+              <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-2">{t('home.lostFoundCardTitle')}</h3>
+              <p className="text-sm text-gray-600 dark:text-gray-300">
                 {t('home.lostFoundCardDesc')}
               </p>
             </Link>
 
-            <Link href="/vaccinations" className="p-6 bg-gradient-to-br from-purple-50 to-purple-100 rounded-lg hover:shadow-lg transition">
+            <Link href="/vaccinations" className="p-6 bg-gradient-to-br from-purple-50 to-purple-100 dark:from-purple-900 dark:to-purple-800 rounded-lg hover:shadow-lg transition">
               <div className="text-4xl mb-3">💉</div>
-              <h3 className="text-lg font-semibold text-gray-900 mb-2">{t('home.vaccinationsCardTitle')}</h3>
-              <p className="text-sm text-gray-600">
+              <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-2">{t('home.vaccinationsCardTitle')}</h3>
+              <p className="text-sm text-gray-600 dark:text-gray-300">
                 {t('home.vaccinationsCardDesc')}
               </p>
             </Link>
@@ -339,12 +339,12 @@ export default function Home() {
       </section>
 
       {/* Testimonials with Photos */}
-      <section className="py-16 px-4 bg-white">
+      <section className="py-16 px-4 bg-white dark:bg-gray-900">
         <div className="max-w-7xl mx-auto">
-          <h2 className="text-3xl font-bold text-center text-gray-900 mb-4">{t('home.testimonialsTitle')}</h2>
-          <p className="text-center text-gray-600 mb-12">{t('home.testimonialsSubtitle')}</p>
+          <h2 className="text-3xl font-bold text-center text-gray-900 dark:text-white mb-4">{t('home.testimonialsTitle')}</h2>
+          <p className="text-center text-gray-600 dark:text-gray-300 mb-12">{t('home.testimonialsSubtitle')}</p>
           <div className="grid md:grid-cols-3 gap-8">
-            <div className="bg-gray-50 rounded-lg p-6 shadow-md">
+            <div className="bg-gray-50 dark:bg-gray-800 rounded-lg p-6 shadow-md">
               <div className="flex items-center mb-4">
                 <div className="relative w-16 h-16 rounded-full overflow-hidden mr-4">
                   <Image
@@ -356,15 +356,15 @@ export default function Home() {
                   />
                 </div>
                 <div>
-                  <h3 className="font-semibold text-gray-900">{t('home.testimonial1Name')}</h3>
-                  <p className="text-sm text-gray-600">{t('home.testimonial1Breed')}</p>
+                  <h3 className="font-semibold text-gray-900 dark:text-white">{t('home.testimonial1Name')}</h3>
+                  <p className="text-sm text-gray-600 dark:text-gray-300">{t('home.testimonial1Breed')}</p>
                 </div>
               </div>
-              <p className="text-gray-700 italic">&quot;{t('home.testimonial1Text')}&quot;</p>
+              <p className="text-gray-700 dark:text-gray-200 italic">&quot;{t('home.testimonial1Text')}&quot;</p>
               <div className="mt-4 text-yellow-500">★★★★★</div>
             </div>
 
-            <div className="bg-gray-50 rounded-lg p-6 shadow-md">
+            <div className="bg-gray-50 dark:bg-gray-800 rounded-lg p-6 shadow-md">
               <div className="flex items-center mb-4">
                 <div className="relative w-16 h-16 rounded-full overflow-hidden mr-4">
                   <Image
@@ -376,15 +376,15 @@ export default function Home() {
                   />
                 </div>
                 <div>
-                  <h3 className="font-semibold text-gray-900">{t('home.testimonial2Name')}</h3>
-                  <p className="text-sm text-gray-600">{t('home.testimonial2Breed')}</p>
+                  <h3 className="font-semibold text-gray-900 dark:text-white">{t('home.testimonial2Name')}</h3>
+                  <p className="text-sm text-gray-600 dark:text-gray-300">{t('home.testimonial2Breed')}</p>
                 </div>
               </div>
-              <p className="text-gray-700 italic">&quot;{t('home.testimonial2Text')}&quot;</p>
+              <p className="text-gray-700 dark:text-gray-200 italic">&quot;{t('home.testimonial2Text')}&quot;</p>
               <div className="mt-4 text-yellow-500">★★★★★</div>
             </div>
 
-            <div className="bg-gray-50 rounded-lg p-6 shadow-md">
+            <div className="bg-gray-50 dark:bg-gray-800 rounded-lg p-6 shadow-md">
               <div className="flex items-center mb-4">
                 <div className="relative w-16 h-16 rounded-full overflow-hidden mr-4">
                   <Image
@@ -396,11 +396,11 @@ export default function Home() {
                   />
                 </div>
                 <div>
-                  <h3 className="font-semibold text-gray-900">{t('home.testimonial3Name')}</h3>
-                  <p className="text-sm text-gray-600">{t('home.testimonial3Breed')}</p>
+                  <h3 className="font-semibold text-gray-900 dark:text-white">{t('home.testimonial3Name')}</h3>
+                  <p className="text-sm text-gray-600 dark:text-gray-300">{t('home.testimonial3Breed')}</p>
                 </div>
               </div>
-              <p className="text-gray-700 italic">&quot;{t('home.testimonial3Text')}&quot;</p>
+              <p className="text-gray-700 dark:text-gray-200 italic">&quot;{t('home.testimonial3Text')}&quot;</p>
               <div className="mt-4 text-yellow-500">★★★★★</div>
             </div>
           </div>
@@ -408,36 +408,36 @@ export default function Home() {
       </section>
 
       {/* Why Choose Us */}
-      <section className="py-16 px-4 bg-gray-50">
+      <section className="py-16 px-4 bg-gray-50 dark:bg-gray-800">
         <div className="max-w-7xl mx-auto">
-          <h2 className="text-3xl font-bold text-center text-gray-900 mb-12">{t('home.whyChooseUs')}</h2>
+          <h2 className="text-3xl font-bold text-center text-gray-900 dark:text-white mb-12">{t('home.whyChooseUs')}</h2>
           <div className="grid md:grid-cols-3 gap-8">
             <div className="text-center">
-              <div className="bg-blue-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+              <div className="bg-blue-100 dark:bg-blue-900 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
                 <span className="text-2xl">✓</span>
               </div>
-              <h3 className="text-xl font-semibold text-gray-900 mb-2">{t('home.professionalCare')}</h3>
-              <p className="text-gray-600">
+              <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-2">{t('home.professionalCare')}</h3>
+              <p className="text-gray-600 dark:text-gray-300">
                 {t('home.professionalCareDesc')}
               </p>
             </div>
 
             <div className="text-center">
-              <div className="bg-blue-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+              <div className="bg-blue-100 dark:bg-blue-900 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
                 <span className="text-2xl">📚</span>
               </div>
-              <h3 className="text-xl font-semibold text-gray-900 mb-2">{t('home.expertKnowledge')}</h3>
-              <p className="text-gray-600">
+              <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-2">{t('home.expertKnowledge')}</h3>
+              <p className="text-gray-600 dark:text-gray-300">
                 {t('home.expertKnowledgeDesc')}
               </p>
             </div>
 
             <div className="text-center">
-              <div className="bg-blue-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+              <div className="bg-blue-100 dark:bg-blue-900 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
                 <span className="text-2xl">💻</span>
               </div>
-              <h3 className="text-xl font-semibold text-gray-900 mb-2">{t('home.easyToUse')}</h3>
-              <p className="text-gray-600">
+              <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-2">{t('home.easyToUse')}</h3>
+              <p className="text-gray-600 dark:text-gray-300">
                 {t('home.easyToUseDesc')}
               </p>
             </div>
@@ -453,7 +453,7 @@ export default function Home() {
             {t('home.readyToGiveDesc')}
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link href="/services/booking" className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-blue-50 transition">
+            <Link href="/services/booking" className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-blue-50 dark:bg-gray-800 dark:hover:bg-gray-700 dark:hover:bg-blue-900 transition">
               {t('home.bookService')}
             </Link>
             <Link href="/breeds" className="bg-blue-500 text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-400 transition">

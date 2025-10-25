@@ -38,7 +38,7 @@ export default function VaccinationsPage() {
             {t('vaccinations.subtitle')}
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <a href="#schedule" className="bg-white text-purple-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition shadow-lg">
+            <a href="#schedule" className="bg-white text-purple-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 dark:bg-gray-800 dark:hover:bg-gray-700 transition shadow-lg">
               {t('vaccinations.viewSchedule')}
             </a>
             <a href="#vaccines" className="bg-purple-700 text-white px-8 py-3 rounded-lg font-semibold hover:bg-purple-800 transition shadow-lg">
@@ -396,7 +396,7 @@ export default function VaccinationsPage() {
               <div key={faq.id} className="bg-white rounded-lg shadow-md overflow-hidden">
                 <button
                   onClick={() => setExpandedFAQ(expandedFAQ === faq.id ? null : faq.id)}
-                  className="w-full p-5 text-left hover:bg-gray-50 transition flex justify-between items-center"
+                  className="w-full p-5 text-left hover:bg-gray-50 dark:hover:bg-gray-700 transition flex justify-between items-center"
                 >
                   <h3 className="text-lg font-semibold pr-4">{t(`vaccinations.faq_${faq.id}_question`)}</h3>
                   <svg
@@ -428,7 +428,7 @@ export default function VaccinationsPage() {
           <p className="text-xl mb-8">{t('vaccinations.ctaSubtitle')}</p>
           <Link
             href="/services/booking"
-            className="inline-block bg-white text-purple-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition shadow-lg"
+            className="inline-block bg-white text-purple-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 dark:bg-gray-800 dark:hover:bg-gray-700 transition shadow-lg"
           >
             {t('vaccinations.scheduleVisit')}
           </Link>

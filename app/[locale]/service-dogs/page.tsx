@@ -164,7 +164,7 @@ export default function ServiceDogsPage() {
             <Link href="#types" className="bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-700 transition shadow-lg">
               {t('serviceDogs.exploreTypes')}
             </Link>
-            <Link href="/" className="bg-white text-blue-600 border-2 border-white px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition shadow-lg">
+            <Link href="/" className="bg-white text-blue-600 border-2 border-white px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 dark:bg-gray-800 dark:hover:bg-gray-700 transition shadow-lg">
               {t('serviceDogs.backToHome')}
             </Link>
           </div>

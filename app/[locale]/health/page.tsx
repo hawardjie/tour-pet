@@ -58,7 +58,7 @@ export default function HealthPage() {
             <Link href="#conditions" className="bg-red-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-red-700 transition shadow-lg">
               {t('health.browseConditions')}
             </Link>
-            <Link href="/" className="bg-white text-red-600 border-2 border-white px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition shadow-lg">
+            <Link href="/" className="bg-white text-red-600 border-2 border-white px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 dark:bg-gray-800 dark:hover:bg-gray-700 transition shadow-lg">
               {t('health.backToHome')}
             </Link>
           </div>

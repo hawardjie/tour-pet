@@ -42,7 +42,7 @@ export default function GalleryPage() {
   ];
 
   return (
-    <div className="min-h-screen bg-gray-50">
+    <div className="min-h-screen bg-gray-50 dark:bg-gray-900">
       {/* Navigation */}
       <Navigation />
 
@@ -76,9 +76,9 @@ export default function GalleryPage() {
           ))}
         </div>
 
-        <div className="mt-12 text-center bg-white rounded-lg shadow-md p-8">
-          <h2 className="text-2xl font-bold text-gray-900 mb-4">{t('gallery.wantYourDog')}</h2>
-          <p className="text-gray-600 mb-6">
+        <div className="mt-12 text-center bg-white dark:bg-gray-800 rounded-lg shadow-md p-8">
+          <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-4">{t('gallery.wantYourDog')}</h2>
+          <p className="text-gray-600 dark:text-gray-300 mb-6">
             {t('gallery.wantYourDogDesc')}
           </p>
           <Link href="/services/booking" className="inline-block bg-purple-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-purple-700 transition">

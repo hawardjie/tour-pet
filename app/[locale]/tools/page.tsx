@@ -86,12 +86,12 @@ export default function ToolsPage() {
   };
 
   return (
-    <div className="min-h-screen bg-gray-50">
+    <div className="min-h-screen bg-gray-50 dark:bg-gray-900">
       {/* Navigation */}
       <Navigation />
 
       {/* Header */}
-      <div className="bg-gradient-to-r from-teal-600 to-teal-700 text-white py-12 px-4">
+      <div className="bg-gradient-to-r from-teal-600 to-teal-700 dark:from-teal-700 dark:to-teal-800 text-white py-12 px-4">
         <div className="max-w-7xl mx-auto">
           <h1 className="text-4xl font-bold mb-4">{t('tools.title')}</h1>
           <p className="text-xl text-teal-100">
@@ -103,19 +103,19 @@ export default function ToolsPage() {
       <div className="max-w-7xl mx-auto px-4 py-12">
         <div className="grid lg:grid-cols-2 gap-8">
           {/* Dog Age Calculator */}
-          <div className="bg-white rounded-lg shadow-lg p-8">
+          <div className="bg-white dark:bg-gray-800 rounded-lg shadow-lg p-8">
             <div className="flex items-center gap-3 mb-6">
               <span className="text-4xl">🎂</span>
-              <h2 className="text-2xl font-bold text-gray-900">{t('tools.ageCalculator')}</h2>
+              <h2 className="text-2xl font-bold text-gray-900 dark:text-white">{t('tools.ageCalculator')}</h2>
             </div>
 
-            <p className="text-gray-600 mb-6">
+            <p className="text-gray-600 dark:text-gray-400 mb-6">
               {t('tools.ageCalculatorDesc')}
             </p>
 
             <div className="space-y-4">
               <div>
-                <label className="block text-sm font-medium text-gray-700 mb-1">
+                <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">
                   {t('tools.dogAge')}
                 </label>
                 <input
@@ -125,18 +125,18 @@ export default function ToolsPage() {
                   min="0"
                   step="0.5"
                   placeholder="e.g., 3.5"
-                  className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-teal-500 focus:border-transparent"
+                  className="w-full px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-teal-500 focus:border-transparent dark:bg-gray-700 dark:text-white dark:placeholder-gray-400"
                 />
               </div>
 
               <div>
-                <label className="block text-sm font-medium text-gray-700 mb-1">
+                <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">
                   {t('tools.dogSize')}
                 </label>
                 <select
                   value={dogSize}
                   onChange={(e) => setDogSize(e.target.value)}
-                  className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-teal-500 focus:border-transparent"
+                  className="w-full px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-teal-500 focus:border-transparent dark:bg-gray-700 dark:text-white"
                 >
                   <option value="small">{t('tools.small')}</option>
                   <option value="medium">{t('tools.medium')}</option>
@@ -153,16 +153,16 @@ export default function ToolsPage() {
               </button>
 
               {humanAge !== null && (
-                <div className="bg-teal-50 border-l-4 border-teal-500 p-6 mt-4">
+                <div className="bg-teal-50 dark:bg-teal-900/30 border-l-4 border-teal-500 p-6 mt-4">
                   <div className="flex items-center justify-between mb-2">
-                    <span className="text-gray-700 font-medium">{t('tools.dogAgeLabel')}</span>
-                    <span className="text-2xl font-bold text-teal-900">{dogAge} years</span>
+                    <span className="text-gray-700 dark:text-gray-300 font-medium">{t('tools.dogAgeLabel')}</span>
+                    <span className="text-2xl font-bold text-teal-900 dark:text-teal-300">{dogAge} years</span>
                   </div>
                   <div className="flex items-center justify-between">
-                    <span className="text-gray-700 font-medium">{t('tools.humanAgeEquivalent')}</span>
-                    <span className="text-3xl font-bold text-teal-600">{humanAge} years</span>
+                    <span className="text-gray-700 dark:text-gray-300 font-medium">{t('tools.humanAgeEquivalent')}</span>
+                    <span className="text-3xl font-bold text-teal-600 dark:text-teal-400">{humanAge} years</span>
                   </div>
-                  <p className="text-sm text-gray-600 mt-4">
+                  <p className="text-sm text-gray-600 dark:text-gray-400 mt-4">
                     {humanAge < 18 && t('tools.youngster')}
                     {humanAge >= 18 && humanAge < 40 && t('tools.primeAdult')}
                     {humanAge >= 40 && humanAge < 60 && t('tools.middleAge')}
@@ -172,9 +172,9 @@ export default function ToolsPage() {
               )}
             </div>
 
-            <div className="mt-6 bg-gray-50 rounded-lg p-4">
-              <h3 className="font-semibold text-gray-900 mb-2">{t('tools.howItWorks')}</h3>
-              <ul className="text-sm text-gray-600 space-y-1">
+            <div className="mt-6 bg-gray-50 dark:bg-gray-700 rounded-lg p-4">
+              <h3 className="font-semibold text-gray-900 dark:text-white mb-2">{t('tools.howItWorks')}</h3>
+              <ul className="text-sm text-gray-600 dark:text-gray-300 space-y-1">
                 <li>• {t('tools.ageFormula1')}</li>
                 <li>• {t('tools.ageFormula2')}</li>
                 <li>• {t('tools.ageFormula3')}</li>
@@ -184,19 +184,19 @@ export default function ToolsPage() {
           </div>
 
           {/* Calorie Calculator */}
-          <div className="bg-white rounded-lg shadow-lg p-8">
+          <div className="bg-white dark:bg-gray-800 rounded-lg shadow-lg p-8">
             <div className="flex items-center gap-3 mb-6">
               <span className="text-4xl">🍖</span>
-              <h2 className="text-2xl font-bold text-gray-900">{t('tools.calorieCalculator')}</h2>
+              <h2 className="text-2xl font-bold text-gray-900 dark:text-white">{t('tools.calorieCalculator')}</h2>
             </div>
 
-            <p className="text-gray-600 mb-6">
+            <p className="text-gray-600 dark:text-gray-400 mb-6">
               {t('tools.calorieCalculatorDesc')}
             </p>
 
             <div className="space-y-4">
               <div>
-                <label className="block text-sm font-medium text-gray-700 mb-1">
+                <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">
                   {t('tools.dogWeight')}
                 </label>
                 <input
@@ -205,18 +205,18 @@ export default function ToolsPage() {
                   onChange={(e) => setDogWeight(e.target.value)}
                   min="0"
                   placeholder="e.g., 45"
-                  className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-teal-500 focus:border-transparent"
+                  className="w-full px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-teal-500 focus:border-transparent dark:bg-gray-700 dark:text-white dark:placeholder-gray-400"
                 />
               </div>
 
               <div>
-                <label className="block text-sm font-medium text-gray-700 mb-1">
+                <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">
                   {t('tools.activityLevel')}
                 </label>
                 <select
                   value={activityLevel}
                   onChange={(e) => setActivityLevel(e.target.value)}
-                  className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-teal-500 focus:border-transparent"
+                  className="w-full px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-teal-500 focus:border-transparent dark:bg-gray-700 dark:text-white"
                 >
                   <option value="low">{t('tools.lowActivity')}</option>
                   <option value="moderate">{t('tools.moderateActivity')}</option>
@@ -233,21 +233,21 @@ export default function ToolsPage() {
               </button>
 
               {dailyCalories !== null && (
-                <div className="bg-orange-50 border-l-4 border-orange-500 p-6 mt-4">
+                <div className="bg-orange-50 dark:bg-orange-900/30 border-l-4 border-orange-500 p-6 mt-4">
                   <div className="flex items-center justify-between mb-4">
-                    <span className="text-gray-700 font-medium">{t('tools.dailyCalorieNeeds')}</span>
-                    <span className="text-3xl font-bold text-orange-600">{dailyCalories} cal</span>
+                    <span className="text-gray-700 dark:text-gray-300 font-medium">{t('tools.dailyCalorieNeeds')}</span>
+                    <span className="text-3xl font-bold text-orange-600 dark:text-orange-400">{dailyCalories} cal</span>
                   </div>
-                  <p className="text-sm text-gray-600">
+                  <p className="text-sm text-gray-600 dark:text-gray-400">
                     {t('tools.calorieNote')}
                   </p>
                 </div>
               )}
             </div>
 
-            <div className="mt-6 bg-gray-50 rounded-lg p-4">
-              <h3 className="font-semibold text-gray-900 mb-2">{t('tools.importantNotes')}</h3>
-              <ul className="text-sm text-gray-600 space-y-1">
+            <div className="mt-6 bg-gray-50 dark:bg-gray-700 rounded-lg p-4">
+              <h3 className="font-semibold text-gray-900 dark:text-white mb-2">{t('tools.importantNotes')}</h3>
+              <ul className="text-sm text-gray-600 dark:text-gray-300 space-y-1">
                 <li>• {t('tools.calorieNote1')}</li>
                 <li>• {t('tools.calorieNote2')}</li>
                 <li>• {t('tools.calorieNote3')}</li>
@@ -258,13 +258,13 @@ export default function ToolsPage() {
           </div>
 
           {/* Body Condition Guide */}
-          <div className="bg-white rounded-lg shadow-lg p-8">
+          <div className="bg-white dark:bg-gray-800 rounded-lg shadow-lg p-8">
             <div className="flex items-center gap-3 mb-6">
               <span className="text-4xl">⚖️</span>
-              <h2 className="text-2xl font-bold text-gray-900">{t('tools.bodyConditionGuide')}</h2>
+              <h2 className="text-2xl font-bold text-gray-900 dark:text-white">{t('tools.bodyConditionGuide')}</h2>
             </div>
 
-            <p className="text-gray-600 mb-6">
+            <p className="text-gray-600 dark:text-gray-400 mb-6">
               {t('tools.bodyConditionDesc')}
             </p>
 
@@ -301,16 +301,16 @@ export default function ToolsPage() {
           </div>
 
           {/* Quick Reference */}
-          <div className="bg-gradient-to-br from-purple-50 to-purple-100 rounded-lg shadow-lg p-8">
+          <div className="bg-gradient-to-br from-purple-50 to-purple-100 dark:from-purple-900/30 dark:to-purple-800/30 rounded-lg shadow-lg p-8">
             <div className="flex items-center gap-3 mb-6">
               <span className="text-4xl">📋</span>
-              <h2 className="text-2xl font-bold text-gray-900">{t('tools.quickReference')}</h2>
+              <h2 className="text-2xl font-bold text-gray-900 dark:text-white">{t('tools.quickReference')}</h2>
             </div>
 
             <div className="space-y-4">
               <div>
-                <h3 className="font-semibold text-gray-900 mb-2">{t('tools.vaccinationSchedule')}</h3>
-                <ul className="text-sm text-gray-700 space-y-1">
+                <h3 className="font-semibold text-gray-900 dark:text-white mb-2">{t('tools.vaccinationSchedule')}</h3>
+                <ul className="text-sm text-gray-700 dark:text-gray-300 space-y-1">
                   <li>• 6-8 weeks: DHPP, Bordetella</li>
                   <li>• 10-12 weeks: DHPP, Leptospirosis</li>
                   <li>• 14-16 weeks: DHPP, Rabies</li>
@@ -319,8 +319,8 @@ export default function ToolsPage() {
               </div>
 
               <div>
-                <h3 className="font-semibold text-gray-900 mb-2">{t('tools.vetVisitFrequency')}</h3>
-                <ul className="text-sm text-gray-700 space-y-1">
+                <h3 className="font-semibold text-gray-900 dark:text-white mb-2">{t('tools.vetVisitFrequency')}</h3>
+                <ul className="text-sm text-gray-700 dark:text-gray-300 space-y-1">
                   <li>• Puppies: Every 3-4 weeks until 16 weeks</li>
                   <li>• Adult dogs: Annual wellness exam</li>
                   <li>• Senior dogs (7+): Every 6 months</li>
@@ -328,8 +328,8 @@ export default function ToolsPage() {
               </div>
 
               <div>
-                <h3 className="font-semibold text-gray-900 mb-2">{t('tools.emergencySigns')}</h3>
-                <ul className="text-sm text-red-700 space-y-1">
+                <h3 className="font-semibold text-gray-900 dark:text-white mb-2">{t('tools.emergencySigns')}</h3>
+                <ul className="text-sm text-red-700 dark:text-red-400 space-y-1">
                   <li>• Difficulty breathing</li>
                   <li>• Unconsciousness or collapse</li>
                   <li>• Severe bleeding</li>
@@ -340,8 +340,8 @@ export default function ToolsPage() {
               </div>
             </div>
 
-            <div className="mt-6 pt-6 border-t border-purple-200">
-              <Link href="/faq" className="text-purple-600 hover:text-purple-700 font-medium">
+            <div className="mt-6 pt-6 border-t border-purple-200 dark:border-purple-700">
+              <Link href="/faq" className="text-purple-600 dark:text-purple-400 hover:text-purple-700 dark:hover:text-purple-300 font-medium">
                 {t('tools.viewCompleteFAQ')}
               </Link>
             </div>

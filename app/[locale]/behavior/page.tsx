@@ -20,7 +20,7 @@ export default function BehaviorPage() {
     : dogBehaviors.filter(b => b.category === selectedCategory);
 
   return (
-    <div className="min-h-screen bg-gray-50">
+    <div className="min-h-screen bg-gray-50 dark:bg-gray-800">
       {/* Navigation */}
       <Navigation />
 
@@ -45,7 +45,7 @@ export default function BehaviorPage() {
             <Link href="#categories" className="bg-green-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-green-700 transition shadow-lg">
               {t('behavior.exploreBehaviors')}
             </Link>
-            <Link href="/" className="bg-white text-green-600 border-2 border-white px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition shadow-lg">
+            <Link href="/" className="bg-white text-green-600 border-2 border-white px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 dark:bg-gray-800 dark:hover:bg-gray-700 transition shadow-lg">
               {t('behavior.backToHome')}
             </Link>
           </div>
@@ -53,7 +53,7 @@ export default function BehaviorPage() {
       </section>
 
       {/* Category Filter */}
-      <div id="categories" className="bg-white shadow-sm border-b sticky top-0 z-40">
+      <div id="categories" className="bg-white dark:bg-gray-900 shadow-sm border-b border-gray-200 dark:border-gray-700 sticky top-0 z-40">
         <div className="max-w-7xl mx-auto px-4 py-4">
           <div className="flex flex-wrap gap-2">
             {categories.map(category => (
@@ -63,7 +63,7 @@ export default function BehaviorPage() {
                 className={`px-4 py-2 rounded-lg font-medium transition ${
                   selectedCategory === category
                     ? 'bg-green-600 text-white'
-                    : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
+                    : 'bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-200 hover:bg-gray-200 dark:hover:bg-gray-600'
                 }`}
               >
                 {category === 'All' ? t('behavior.categoryAll') : t(`behavior.category${category}`)}
@@ -74,26 +74,26 @@ export default function BehaviorPage() {
       </div>
 
       <div className="max-w-7xl mx-auto px-4 py-8">
-        <p className="text-gray-600 mb-6">
+        <p className="text-gray-600 dark:text-gray-300 mb-6">
           {t('behavior.showingResults', { count: filteredBehaviors.length })}
         </p>
 
         <div className="space-y-4">
           {filteredBehaviors.map(behavior => (
-            <div key={behavior.id} className="bg-white rounded-lg shadow-md overflow-hidden">
+            <div key={behavior.id} className="bg-white dark:bg-gray-900 rounded-lg shadow-md overflow-hidden">
               <button
                 onClick={() => setExpandedBehavior(expandedBehavior === behavior.id ? null : behavior.id)}
-                className="w-full p-6 text-left hover:bg-gray-50 transition"
+                className="w-full p-6 text-left hover:bg-gray-50 dark:hover:bg-gray-700 transition"
               >
                 <div className="flex justify-between items-start">
                   <div className="flex-1">
                     <div className="flex items-center gap-3 mb-2">
-                      <h2 className="text-2xl font-bold text-gray-900">{t(`behavior.behavior_${behavior.id}_name`)}</h2>
-                      <span className="px-3 py-1 bg-green-100 text-green-800 text-sm rounded-full">
+                      <h2 className="text-2xl font-bold text-gray-900 dark:text-white">{t(`behavior.behavior_${behavior.id}_name`)}</h2>
+                      <span className="px-3 py-1 bg-green-100 dark:bg-green-900 text-green-800 dark:text-green-100 text-sm rounded-full">
                         {t(`behavior.category${behavior.category}`)}
                       </span>
                     </div>
-                    <p className="text-gray-600">{t(`behavior.behavior_${behavior.id}_description`)}</p>
+                    <p className="text-gray-600 dark:text-gray-300">{t(`behavior.behavior_${behavior.id}_description`)}</p>
                   </div>
                   <svg
                     className={`w-6 h-6 text-gray-400 transition-transform ${
@@ -112,18 +112,18 @@ export default function BehaviorPage() {
                 <div className="px-6 pb-6 space-y-6 border-t">
                   {/* Meaning */}
                   <div className="mt-6">
-                    <h3 className="text-lg font-semibold text-gray-900 mb-2">{t('behavior.whatItMeans')}</h3>
-                    <p className="text-gray-700">{t(`behavior.behavior_${behavior.id}_meaning`)}</p>
+                    <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-2">{t('behavior.whatItMeans')}</h3>
+                    <p className="text-gray-700 dark:text-gray-200">{t(`behavior.behavior_${behavior.id}_meaning`)}</p>
                   </div>
 
                   {/* What To Do */}
                   <div>
-                    <h3 className="text-lg font-semibold text-gray-900 mb-2">{t('behavior.whatToDo')}</h3>
+                    <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-2">{t('behavior.whatToDo')}</h3>
                     <ul className="space-y-2">
                       {behavior.whatToDo.map((item, idx) => (
                         <li key={idx} className="flex items-start">
                           <span className="text-green-600 mr-2 mt-1">✓</span>
-                          <span className="text-gray-700">{t(`behavior.behavior_${behavior.id}_whatToDo_${idx}`)}</span>
+                          <span className="text-gray-700 dark:text-gray-200">{t(`behavior.behavior_${behavior.id}_whatToDo_${idx}`)}</span>
                         </li>
                       ))}
                     </ul>
@@ -136,7 +136,7 @@ export default function BehaviorPage() {
                       {behavior.whenToWorry.map((item, idx) => (
                         <li key={idx} className="flex items-start">
                           <span className="text-red-600 mr-2 mt-1">⚠</span>
-                          <span className="text-gray-700">{t(`behavior.behavior_${behavior.id}_whenToWorry_${idx}`)}</span>
+                          <span className="text-gray-700 dark:text-gray-200">{t(`behavior.behavior_${behavior.id}_whenToWorry_${idx}`)}</span>
                         </li>
                       ))}
                     </ul>
@@ -144,12 +144,12 @@ export default function BehaviorPage() {
 
                   {/* Tips */}
                   <div>
-                    <h3 className="text-lg font-semibold text-gray-900 mb-2">{t('behavior.tips')}</h3>
+                    <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-2">{t('behavior.tips')}</h3>
                     <ul className="space-y-2">
                       {behavior.tips.map((tip, idx) => (
                         <li key={idx} className="flex items-start">
                           <span className="text-blue-600 mr-2 mt-1">💡</span>
-                          <span className="text-gray-700">{t(`behavior.behavior_${behavior.id}_tip_${idx}`)}</span>
+                          <span className="text-gray-700 dark:text-gray-200">{t(`behavior.behavior_${behavior.id}_tip_${idx}`)}</span>
                         </li>
                       ))}
                     </ul>

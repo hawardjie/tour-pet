@@ -9,7 +9,7 @@ import Footer from '@/components/Footer';
 export default function ServicesPage() {
   const t = useTranslations();
   return (
-    <div className="min-h-screen bg-gray-50">
+    <div className="min-h-screen bg-gray-50 dark:bg-gray-900">
       {/* Navigation */}
       <Navigation />
 
@@ -34,7 +34,7 @@ export default function ServicesPage() {
             <Link href="/services/booking" className="bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-700 transition shadow-lg">
               {t('services.bookButton')}
             </Link>
-            <Link href="/" className="bg-white text-blue-600 border-2 border-white px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition shadow-lg">
+            <Link href="/" className="bg-white text-blue-600 border-2 border-white px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 dark:bg-gray-800 dark:hover:bg-gray-700 transition shadow-lg">
               {t('services.backToHome')}
             </Link>
           </div>
@@ -43,7 +43,7 @@ export default function ServicesPage() {
 
       <div className="max-w-7xl mx-auto px-4 py-12">
         {/* Dog Sitting Service */}
-        <div className="bg-white rounded-lg shadow-lg overflow-hidden mb-8">
+        <div className="bg-white dark:bg-gray-800 rounded-lg shadow-lg overflow-hidden mb-8">
           <div className="md:flex">
             <div className="md:w-1/3 relative overflow-hidden min-h-[300px] md:min-h-full">
               <Image
@@ -55,36 +55,36 @@ export default function ServicesPage() {
               />
             </div>
             <div className="md:w-2/3 p-8">
-              <h2 className="text-3xl font-bold text-gray-900 mb-4">{t('services.dogSitting')}</h2>
-              <p className="text-gray-700 mb-6 leading-relaxed">
+              <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-4">{t('services.dogSitting')}</h2>
+              <p className="text-gray-700 dark:text-gray-300 mb-6 leading-relaxed">
                 {t('services.dogSittingDesc')}
               </p>
 
-              <h3 className="text-xl font-semibold text-gray-900 mb-3">{t('services.whatsIncluded')}</h3>
+              <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-3">{t('services.whatsIncluded')}</h3>
               <ul className="space-y-2 mb-6">
                 <li className="flex items-start">
                   <span className="text-blue-600 mr-2">✓</span>
-                  <span className="text-gray-700">{t('services.sittingFeature1')}</span>
+                  <span className="text-gray-700 dark:text-gray-300">{t('services.sittingFeature1')}</span>
                 </li>
                 <li className="flex items-start">
                   <span className="text-blue-600 mr-2">✓</span>
-                  <span className="text-gray-700">{t('services.sittingFeature2')}</span>
+                  <span className="text-gray-700 dark:text-gray-300">{t('services.sittingFeature2')}</span>
                 </li>
                 <li className="flex items-start">
                   <span className="text-blue-600 mr-2">✓</span>
-                  <span className="text-gray-700">{t('services.sittingFeature3')}</span>
+                  <span className="text-gray-700 dark:text-gray-300">{t('services.sittingFeature3')}</span>
                 </li>
                 <li className="flex items-start">
                   <span className="text-blue-600 mr-2">✓</span>
-                  <span className="text-gray-700">{t('services.sittingFeature4')}</span>
+                  <span className="text-gray-700 dark:text-gray-300">{t('services.sittingFeature4')}</span>
                 </li>
                 <li className="flex items-start">
                   <span className="text-blue-600 mr-2">✓</span>
-                  <span className="text-gray-700">{t('services.sittingFeature5')}</span>
+                  <span className="text-gray-700 dark:text-gray-300">{t('services.sittingFeature5')}</span>
                 </li>
                 <li className="flex items-start">
                   <span className="text-blue-600 mr-2">✓</span>
-                  <span className="text-gray-700">{t('services.sittingFeature6')}</span>
+                  <span className="text-gray-700 dark:text-gray-300">{t('services.sittingFeature6')}</span>
                 </li>
               </ul>
 
@@ -101,7 +101,7 @@ export default function ServicesPage() {
         </div>
 
         {/* Dog Walking Service */}
-        <div className="bg-white rounded-lg shadow-lg overflow-hidden mb-8">
+        <div className="bg-white dark:bg-gray-800 rounded-lg shadow-lg overflow-hidden mb-8">
           <div className="md:flex">
             <div className="md:w-1/3 relative overflow-hidden min-h-[300px] md:min-h-full md:order-2">
               <Image
@@ -113,36 +113,36 @@ export default function ServicesPage() {
               />
             </div>
             <div className="md:w-2/3 p-8">
-              <h2 className="text-3xl font-bold text-gray-900 mb-4">{t('services.dogWalking')}</h2>
-              <p className="text-gray-700 mb-6 leading-relaxed">
+              <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-4">{t('services.dogWalking')}</h2>
+              <p className="text-gray-700 dark:text-gray-300 mb-6 leading-relaxed">
                 {t('services.dogWalkingDesc')}
               </p>
 
-              <h3 className="text-xl font-semibold text-gray-900 mb-3">{t('services.serviceOptions')}</h3>
+              <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-3">{t('services.serviceOptions')}</h3>
               <ul className="space-y-2 mb-6">
                 <li className="flex items-start">
                   <span className="text-green-600 mr-2">✓</span>
-                  <span className="text-gray-700"><strong>{t('services.walkingOption1')}</strong> {t('services.walkingOption1Desc')}</span>
+                  <span className="text-gray-700 dark:text-gray-300"><strong>{t('services.walkingOption1')}</strong> {t('services.walkingOption1Desc')}</span>
                 </li>
                 <li className="flex items-start">
                   <span className="text-green-600 mr-2">✓</span>
-                  <span className="text-gray-700"><strong>{t('services.walkingOption2')}</strong> {t('services.walkingOption2Desc')}</span>
+                  <span className="text-gray-700 dark:text-gray-300"><strong>{t('services.walkingOption2')}</strong> {t('services.walkingOption2Desc')}</span>
                 </li>
                 <li className="flex items-start">
                   <span className="text-green-600 mr-2">✓</span>
-                  <span className="text-gray-700"><strong>{t('services.walkingOption3')}</strong> {t('services.walkingOption3Desc')}</span>
+                  <span className="text-gray-700 dark:text-gray-300"><strong>{t('services.walkingOption3')}</strong> {t('services.walkingOption3Desc')}</span>
                 </li>
                 <li className="flex items-start">
                   <span className="text-green-600 mr-2">✓</span>
-                  <span className="text-gray-700"><strong>{t('services.walkingOption4')}</strong> {t('services.walkingOption4Desc')}</span>
+                  <span className="text-gray-700 dark:text-gray-300"><strong>{t('services.walkingOption4')}</strong> {t('services.walkingOption4Desc')}</span>
                 </li>
                 <li className="flex items-start">
                   <span className="text-green-600 mr-2">✓</span>
-                  <span className="text-gray-700">{t('services.walkingFeature1')}</span>
+                  <span className="text-gray-700 dark:text-gray-300">{t('services.walkingFeature1')}</span>
                 </li>
                 <li className="flex items-start">
                   <span className="text-green-600 mr-2">✓</span>
-                  <span className="text-gray-700">{t('services.walkingFeature2')}</span>
+                  <span className="text-gray-700 dark:text-gray-300">{t('services.walkingFeature2')}</span>
                 </li>
               </ul>
 
@@ -189,9 +189,9 @@ export default function ServicesPage() {
         </div>
 
         {/* CTA */}
-        <div className="text-center bg-white rounded-lg shadow-md p-8">
-          <h2 className="text-3xl font-bold text-gray-900 mb-4">{t('services.readyToBook')}</h2>
-          <p className="text-gray-600 mb-6 max-w-2xl mx-auto">
+        <div className="text-center bg-white dark:bg-gray-800 rounded-lg shadow-md p-8">
+          <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-4">{t('services.readyToBook')}</h2>
+          <p className="text-gray-600 dark:text-gray-400 mb-6 max-w-2xl mx-auto">
             {t('services.readyToBookDesc')}
           </p>
           <Link href="/services/booking" className="inline-block bg-blue-600 text-white px-8 py-4 rounded-lg font-semibold hover:bg-blue-700 transition text-lg">

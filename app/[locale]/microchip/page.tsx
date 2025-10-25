@@ -26,7 +26,7 @@ export default function MicrochipPage() {
             {t('microchip.subtitle')}
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <a href="#benefits" className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition shadow-lg">
+            <a href="#benefits" className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 dark:bg-gray-800 dark:hover:bg-gray-700 transition shadow-lg">
               {t('microchip.learnMore')}
             </a>
             <a href="#faq" className="bg-blue-800 text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-900 transition shadow-lg">
@@ -101,7 +101,7 @@ export default function MicrochipPage() {
               <div key={faq.id} className="bg-gray-50 rounded-lg shadow-md overflow-hidden">
                 <button
                   onClick={() => setExpandedFAQ(expandedFAQ === faq.id ? null : faq.id)}
-                  className="w-full p-6 text-left hover:bg-gray-100 transition flex justify-between items-center"
+                  className="w-full p-6 text-left hover:bg-gray-100 dark:hover:bg-gray-700 transition flex justify-between items-center"
                 >
                   <h3 className="text-lg font-semibold pr-4">{t(`microchip.faq_${faq.id}_question`)}</h3>
                   <svg
@@ -133,7 +133,7 @@ export default function MicrochipPage() {
           <p className="text-xl mb-8">{t('microchip.ctaSubtitle')}</p>
           <Link
             href="/services/booking"
-            className="inline-block bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition shadow-lg"
+            className="inline-block bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 dark:bg-gray-800 dark:hover:bg-gray-700 transition shadow-lg"
           >
             {t('microchip.findVet')}
           </Link>

@@ -114,7 +114,7 @@ export default function BreedGrowthCharts({ growthData, breedName }: BreedGrowth
           className={`px-6 py-3 rounded-lg font-medium transition ${
             activeChart === 'growth'
               ? 'bg-blue-600 text-white shadow-md'
-              : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
+              : 'bg-gray-100 text-gray-700 hover:bg-gray-200 dark:bg-gray-700 dark:text-gray-200 dark:hover:bg-gray-600'
           }`}
         >
           📈 {t('breedGrowth.growthChart')}
@@ -124,7 +124,7 @@ export default function BreedGrowthCharts({ growthData, breedName }: BreedGrowth
           className={`px-6 py-3 rounded-lg font-medium transition ${
             activeChart === 'food'
               ? 'bg-orange-600 text-white shadow-md'
-              : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
+              : 'bg-gray-100 text-gray-700 hover:bg-gray-200 dark:bg-gray-700 dark:text-gray-200 dark:hover:bg-gray-600'
           }`}
         >
           🍖 {t('breedGrowth.foodChart')}
@@ -134,7 +134,7 @@ export default function BreedGrowthCharts({ growthData, breedName }: BreedGrowth
           className={`px-6 py-3 rounded-lg font-medium transition ${
             activeChart === 'vaccines'
               ? 'bg-purple-600 text-white shadow-md'
-              : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
+              : 'bg-gray-100 text-gray-700 hover:bg-gray-200 dark:bg-gray-700 dark:text-gray-200 dark:hover:bg-gray-600'
           }`}
         >
           💉 {t('breedGrowth.vaccineChart')}
@@ -304,7 +304,7 @@ export default function BreedGrowthCharts({ growthData, breedName }: BreedGrowth
               {t('breedGrowth.vaccineChartDescription')}
             </p>
             <ResponsiveContainer width="100%" height={400}>
-              <BarChart data={vaccineChartData} margin={{ top: 5, right: 30, left: 20, bottom: 25 }}>
+              <BarChart data={vaccineChartData} margin={{ top: 5, right: 30, left: 80, bottom: 25 }}>
                 <CartesianGrid strokeDasharray="3 3" stroke="#e0e0e0" />
                 <XAxis
                   dataKey="ageLabel"
@@ -315,6 +315,7 @@ export default function BreedGrowthCharts({ growthData, breedName }: BreedGrowth
                   stroke="#9333ea"
                   domain={[0, 3]}
                   ticks={[1, 2, 3]}
+                  width={70}
                   tickFormatter={(value) =>
                     value === 3 ? t('breedGrowth.critical') : value === 2 ? t('breedGrowth.recommended') : t('breedGrowth.optional')
                   }

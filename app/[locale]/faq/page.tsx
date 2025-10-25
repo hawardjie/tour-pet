@@ -56,7 +56,7 @@ export default function FAQPage() {
             <Link href="#search" className="bg-pink-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-pink-700 transition shadow-lg">
               {t('faq.searchQuestions')}
             </Link>
-            <Link href="/" className="bg-white text-pink-600 border-2 border-white px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition shadow-lg">
+            <Link href="/" className="bg-white text-pink-600 border-2 border-white px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 dark:bg-gray-800 dark:hover:bg-gray-700 transition shadow-lg">
               {t('faq.backToHome')}
             </Link>
           </div>
@@ -102,7 +102,7 @@ export default function FAQPage() {
             <div key={faq.id} className="bg-white rounded-lg shadow-md overflow-hidden">
               <button
                 onClick={() => setExpandedFAQ(expandedFAQ === faq.id ? null : faq.id)}
-                className="w-full p-6 text-left hover:bg-gray-50 transition"
+                className="w-full p-6 text-left hover:bg-gray-50 dark:hover:bg-gray-700 transition"
               >
                 <div className="flex justify-between items-start">
                   <div className="flex-1">
@@ -164,10 +164,10 @@ export default function FAQPage() {
             <a href="mailto:info@tour.pet" className="bg-pink-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-pink-700 transition">
               {t('faq.emailUs')}
             </a>
-            <a href="weixin://TourPet" className="bg-white text-pink-600 border-2 border-pink-600 px-6 py-3 rounded-lg font-semibold hover:bg-pink-50 transition">
-              {t('faq.callUs')}
+            <a href="weixin://TourPet" className="bg-white text-pink-600 border-2 border-pink-600 px-6 py-3 rounded-lg font-semibold hover:bg-pink-50 dark:bg-gray-800 dark:hover:bg-gray-700 transition">
+              {t('faq.wechatUs')}
             </a>
-            <a href="https://line.me/R/oaMessage/%40TourPet" className="bg-white text-pink-600 border-2 border-pink-600 px-6 py-3 rounded-lg font-semibold hover:bg-pink-50 transition">
+            <a href="https://line.me/R/oaMessage/%40TourPet" className="bg-white text-pink-600 border-2 border-pink-600 px-6 py-3 rounded-lg font-semibold hover:bg-pink-50 dark:bg-gray-800 dark:hover:bg-gray-700 transition">
               {t('faq.lineUs')}
             </a>
           </div>

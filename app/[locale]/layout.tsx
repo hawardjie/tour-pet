@@ -3,6 +3,7 @@ import { getMessages } from 'next-intl/server';
 import { notFound } from 'next/navigation';
 import { locales } from '@/i18n';
 import AuthContext from '@/lib/auth-context';
+import { ThemeProvider } from '@/components/ThemeProvider';
 
 export function generateStaticParams() {
   return locales.map((locale) => ({ locale }));
@@ -28,7 +29,9 @@ export default async function LocaleLayout({
   return (
     <AuthContext>
       <NextIntlClientProvider messages={messages}>
-        {children}
+        <ThemeProvider>
+          {children}
+        </ThemeProvider>
       </NextIntlClientProvider>
     </AuthContext>
   );

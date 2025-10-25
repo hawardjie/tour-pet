@@ -3,7 +3,8 @@
 import { useState, useEffect } from 'react';
 import { useSession } from 'next-auth/react';
 import { useRouter } from 'next/navigation';
-import { useTranslations } from 'next-intl';
+import { useTranslations, useLocale } from 'next-intl';
+import Link from 'next/link';
 import Navigation from '@/components/Navigation';
 import Footer from '@/components/Footer';
 import { getProviderByUserId, updateProvider, type Provider } from '@/lib/services/provider-service';
@@ -11,6 +12,7 @@ import { getBookingsByProviderId, updateBookingStatus, type Booking } from '@/li
 
 export default function ProviderDashboardPage() {
   const t = useTranslations();
+  const locale = useLocale();
   const { data: session, status } = useSession();
   const router = useRouter();
   const [provider, setProvider] = useState<Provider | null>(null);
@@ -214,6 +216,34 @@ export default function ProviderDashboardPage() {
             </div>
           </div>
 
+          {/* Quick Actions */}
+          <div className="bg-gradient-to-r from-blue-50 to-indigo-50 border border-blue-200 rounded-lg p-6 mb-6">
+            <div className="flex items-center justify-between">
+              <div className="flex items-center space-x-4">
+                <div className="flex-shrink-0">
+                  <div className="w-12 h-12 bg-blue-600 rounded-lg flex items-center justify-center">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor" className="w-6 h-6 text-white">
+                      <path strokeLinecap="round" strokeLinejoin="round" d="M6.75 3v2.25M17.25 3v2.25M3 18.75V7.5a2.25 2.25 0 012.25-2.25h13.5A2.25 2.25 0 0121 7.5v11.25m-18 0A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75m-18 0v-7.5A2.25 2.25 0 015.25 9h13.5A2.25 2.25 0 0121 11.25v7.5" />
+                    </svg>
+                  </div>
+                </div>
+                <div>
+                  <h3 className="text-lg font-semibold text-gray-900">Manage Your Availability</h3>
+                  <p className="text-sm text-gray-600 mt-1">Set your weekly schedule and block off dates when you're unavailable</p>
+                </div>
+              </div>
+              <Link
+                href={`/${locale}/provider/availability`}
+                className="flex-shrink-0 px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 font-medium transition-colors flex items-center space-x-2"
+              >
+                <span>Manage Availability</span>
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor" className="w-5 h-5">
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
+                </svg>
+              </Link>
+            </div>
+          </div>
+
           {/* Profile Details */}
           <div className="bg-white shadow rounded-lg p-6 mb-6">
             <h2 className="text-xl font-semibold text-gray-900 mb-4">{t('provider.profileDetails')}</h2>
@@ -360,7 +390,7 @@ export default function ProviderDashboardPage() {
             {isEditing ? (
               <div className="space-y-3">
                 {Object.keys(provider.availability).map((day) => (
-                  <label key={day} className="flex items-center p-3 border border-gray-300 rounded-lg hover:bg-gray-50 cursor-pointer">
+                  <label key={day} className="flex items-center p-3 border border-gray-300 rounded-lg hover:bg-gray-50 dark:hover:bg-gray-700 cursor-pointer">
                     <input
                       type="checkbox"
                       checked={editData.availability?.[day as keyof typeof editData.availability] || false}
@@ -394,7 +424,7 @@ export default function ProviderDashboardPage() {
                 <div className="mt-6 flex justify-end space-x-4">
                   <button
                     onClick={handleCancel}
-                    className="px-6 py-2 border border-gray-300 rounded-md text-gray-700 hover:bg-gray-50"
+                    className="px-6 py-2 border border-gray-300 rounded-md text-gray-700 hover:bg-gray-50 dark:hover:bg-gray-700"
                   >
                     {t('common.cancel')}
                   </button>

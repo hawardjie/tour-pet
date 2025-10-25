@@ -43,7 +43,7 @@ export default function AdoptionPage() {
             <a href="#benefits" className="bg-green-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-green-700 transition shadow-lg">
               {t('adoption.whyAdopt')}
             </a>
-            <a href="#resources" className="bg-white text-green-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition shadow-lg">
+            <a href="#resources" className="bg-white text-green-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 dark:bg-gray-800 dark:hover:bg-gray-700 transition shadow-lg">
               {t('adoption.findDog')}
             </a>
           </div>
@@ -117,7 +117,7 @@ export default function AdoptionPage() {
               <div key={procedure.id} className="bg-gray-50 rounded-lg shadow-md overflow-hidden border-2 border-gray-200">
                 <button
                   onClick={() => setExpandedProcedure(expandedProcedure === procedure.id ? null : procedure.id)}
-                  className="w-full p-6 text-left hover:bg-gray-100 transition flex justify-between items-start"
+                  className="w-full p-6 text-left hover:bg-gray-100 dark:hover:bg-gray-700 transition flex justify-between items-start"
                 >
                   <div className="flex items-start flex-1">
                     <div className="flex-shrink-0 w-12 h-12 bg-green-600 text-white rounded-full flex items-center justify-center text-xl font-bold mr-4">
@@ -306,7 +306,7 @@ export default function AdoptionPage() {
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a
               href="#resources"
-              className="inline-block bg-white text-green-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition shadow-lg"
+              className="inline-block bg-white text-green-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 dark:bg-gray-800 dark:hover:bg-gray-700 transition shadow-lg"
             >
               {t('adoption.browseResources')}
             </a>

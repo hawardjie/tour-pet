@@ -198,7 +198,7 @@ export default function LostFoundPage() {
           <p className="text-xl mb-8">{t('lostFound.ctaSubtitle')}</p>
           <Link
             href="/microchip"
-            className="inline-block bg-white text-orange-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition shadow-lg"
+            className="inline-block bg-white text-orange-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 dark:bg-gray-800 dark:hover:bg-gray-700 transition shadow-lg"
           >
             {t('lostFound.learnMicrochip')}
           </Link>

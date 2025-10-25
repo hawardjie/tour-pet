@@ -41,14 +41,14 @@ export default function BookingPage() {
 
   if (submitted) {
     return (
-      <div className="min-h-screen bg-gray-50">
+      <div className="min-h-screen bg-gray-50 dark:bg-gray-900">
         <Navigation />
 
         <div className="max-w-2xl mx-auto px-4 py-16 text-center">
-          <div className="bg-white rounded-lg shadow-lg p-12">
+          <div className="bg-white dark:bg-gray-800 rounded-lg shadow-lg p-12">
             <div className="text-6xl mb-6">🎉</div>
-            <h1 className="text-3xl font-bold text-gray-900 mb-4">{t('booking.bookingReceived')}</h1>
-            <p className="text-gray-600 mb-8">
+            <h1 className="text-3xl font-bold text-gray-900 dark:text-white mb-4">{t('booking.bookingReceived')}</h1>
+            <p className="text-gray-600 dark:text-gray-400 mb-8">
               {t('booking.thankYou')}
             </p>
             <div className="bg-blue-50 border-l-4 border-blue-500 p-4 mb-8 text-left">
@@ -66,7 +66,7 @@ export default function BookingPage() {
               </Link>
               <button
                 onClick={() => setSubmitted(false)}
-                className="bg-white text-blue-600 border-2 border-blue-600 px-6 py-3 rounded-lg font-semibold hover:bg-blue-50 transition"
+                className="bg-white text-blue-600 border-2 border-blue-600 px-6 py-3 rounded-lg font-semibold hover:bg-blue-50 dark:bg-gray-800 dark:hover:bg-blue-900 transition"
               >
                 {t('booking.bookAnother')}
               </button>
@@ -78,7 +78,7 @@ export default function BookingPage() {
   }
 
   return (
-    <div className="min-h-screen bg-gray-50">
+    <div className="min-h-screen bg-gray-50 dark:bg-gray-900">
       {/* Navigation */}
       <Navigation />
 
@@ -103,7 +103,7 @@ export default function BookingPage() {
             <Link href="#form" className="bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-700 transition shadow-lg">
               {t('booking.startBooking')}
             </Link>
-            <Link href="/services" className="bg-white text-blue-600 border-2 border-white px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition shadow-lg">
+            <Link href="/services" className="bg-white text-blue-600 border-2 border-white px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 dark:bg-gray-800 dark:hover:bg-gray-700 transition shadow-lg">
               {t('booking.viewServices')}
             </Link>
           </div>
@@ -111,17 +111,17 @@ export default function BookingPage() {
       </section>
 
       <div id="form" className="max-w-3xl mx-auto px-4 py-12">
-        <form onSubmit={handleSubmit} className="bg-white rounded-lg shadow-lg p-8">
+        <form onSubmit={handleSubmit} className="bg-white dark:bg-gray-800 rounded-lg shadow-lg p-8">
           {/* Service Type */}
           <div className="mb-6">
-            <label className="block text-sm font-semibold text-gray-700 mb-3">
+            <label className="block text-sm font-semibold text-gray-700 dark:text-gray-300 mb-3">
               {t('booking.serviceType')} *
             </label>
             <div className="grid md:grid-cols-2 gap-4">
               <label className={`border-2 rounded-lg p-4 cursor-pointer transition ${
                 formData.service === 'sitting'
-                  ? 'border-blue-500 bg-blue-50'
-                  : 'border-gray-200 hover:border-gray-300'
+                  ? 'border-blue-500 bg-blue-50 dark:bg-blue-900/30'
+                  : 'border-gray-200 dark:border-gray-600 hover:border-gray-300 dark:hover:border-gray-500'
               }`}>
                 <input
                   type="radio"
@@ -131,14 +131,14 @@ export default function BookingPage() {
                   onChange={handleChange}
                   className="mr-3"
                 />
-                <span className="font-medium">{t('booking.dogSitting')}</span>
-                <p className="text-sm text-gray-600 mt-1">{t('booking.dogSittingDesc')}</p>
+                <span className="font-medium dark:text-white">{t('booking.dogSitting')}</span>
+                <p className="text-sm text-gray-600 dark:text-gray-400 mt-1">{t('booking.dogSittingDesc')}</p>
               </label>
 
               <label className={`border-2 rounded-lg p-4 cursor-pointer transition ${
                 formData.service === 'walking'
-                  ? 'border-blue-500 bg-blue-50'
-                  : 'border-gray-200 hover:border-gray-300'
+                  ? 'border-blue-500 bg-blue-50 dark:bg-blue-900/30'
+                  : 'border-gray-200 dark:border-gray-600 hover:border-gray-300 dark:hover:border-gray-500'
               }`}>
                 <input
                   type="radio"
@@ -148,18 +148,18 @@ export default function BookingPage() {
                   onChange={handleChange}
                   className="mr-3"
                 />
-                <span className="font-medium">{t('booking.dogWalking')}</span>
-                <p className="text-sm text-gray-600 mt-1">{t('booking.dogWalkingDesc')}</p>
+                <span className="font-medium dark:text-white">{t('booking.dogWalking')}</span>
+                <p className="text-sm text-gray-600 dark:text-gray-400 mt-1">{t('booking.dogWalkingDesc')}</p>
               </label>
             </div>
           </div>
 
           {/* Contact Information */}
           <div className="mb-6">
-            <h3 className="text-lg font-semibold text-gray-900 mb-4">{t('booking.yourInformation')}</h3>
+            <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-4">{t('booking.yourInformation')}</h3>
             <div className="grid md:grid-cols-2 gap-4">
               <div>
-                <label className="block text-sm font-medium text-gray-700 mb-1">
+                <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">
                   {t('booking.yourName')} *
                 </label>
                 <input
@@ -168,12 +168,12 @@ export default function BookingPage() {
                   required
                   value={formData.name}
                   onChange={handleChange}
-                  className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                  className="w-full px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent dark:bg-gray-700 dark:text-white dark:placeholder-gray-400"
                 />
               </div>
 
               <div>
-                <label className="block text-sm font-medium text-gray-700 mb-1">
+                <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">
                   {t('booking.email')} *
                 </label>
                 <input
@@ -182,7 +182,7 @@ export default function BookingPage() {
                   required
                   value={formData.email}
                   onChange={handleChange}
-                  className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                  className="w-full px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent dark:bg-gray-700 dark:text-white dark:placeholder-gray-400"
                 />
               </div>
 
@@ -196,7 +196,7 @@ export default function BookingPage() {
                   required
                   value={formData.phone}
                   onChange={handleChange}
-                  className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                  className="w-full px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent dark:bg-gray-700 dark:text-white dark:placeholder-gray-400"
                 />
               </div>
             </div>
@@ -204,10 +204,10 @@ export default function BookingPage() {
 
           {/* Dog Information */}
           <div className="mb-6">
-            <h3 className="text-lg font-semibold text-gray-900 mb-4">{t('booking.dogInformation')}</h3>
+            <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-4">{t('booking.dogInformation')}</h3>
             <div className="grid md:grid-cols-3 gap-4">
               <div>
-                <label className="block text-sm font-medium text-gray-700 mb-1">
+                <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">
                   {t('booking.dogName')} *
                 </label>
                 <input
@@ -216,12 +216,12 @@ export default function BookingPage() {
                   required
                   value={formData.dogName}
                   onChange={handleChange}
-                  className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                  className="w-full px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent dark:bg-gray-700 dark:text-white dark:placeholder-gray-400"
                 />
               </div>
 
               <div>
-                <label className="block text-sm font-medium text-gray-700 mb-1">
+                <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">
                   {t('booking.breed')}
                 </label>
                 <input
@@ -229,12 +229,12 @@ export default function BookingPage() {
                   name="breed"
                   value={formData.breed}
                   onChange={handleChange}
-                  className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                  className="w-full px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent dark:bg-gray-700 dark:text-white dark:placeholder-gray-400"
                 />
               </div>
 
               <div>
-                <label className="block text-sm font-medium text-gray-700 mb-1">
+                <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">
                   {t('booking.age')}
                 </label>
                 <input
@@ -243,7 +243,7 @@ export default function BookingPage() {
                   min="0"
                   value={formData.age}
                   onChange={handleChange}
-                  className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                  className="w-full px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent dark:bg-gray-700 dark:text-white dark:placeholder-gray-400"
                 />
               </div>
             </div>
@@ -251,12 +251,12 @@ export default function BookingPage() {
 
           {/* Service Details */}
           <div className="mb-6">
-            <h3 className="text-lg font-semibold text-gray-900 mb-4">{t('booking.serviceDetails')}</h3>
+            <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-4">{t('booking.serviceDetails')}</h3>
 
             {formData.service === 'sitting' ? (
               <div className="grid md:grid-cols-2 gap-4">
                 <div>
-                  <label className="block text-sm font-medium text-gray-700 mb-1">
+                  <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">
                     {t('booking.startDate')} *
                   </label>
                   <input
@@ -266,12 +266,12 @@ export default function BookingPage() {
                     value={formData.startDate}
                     onChange={handleChange}
                     min={new Date().toISOString().split('T')[0]}
-                    className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                    className="w-full px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent dark:bg-gray-700 dark:text-white"
                   />
                 </div>
 
                 <div>
-                  <label className="block text-sm font-medium text-gray-700 mb-1">
+                  <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">
                     {t('booking.endDate')} *
                   </label>
                   <input
@@ -281,7 +281,7 @@ export default function BookingPage() {
                     value={formData.endDate}
                     onChange={handleChange}
                     min={formData.startDate || new Date().toISOString().split('T')[0]}
-                    className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                    className="w-full px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent dark:bg-gray-700 dark:text-white"
                   />
                 </div>
               </div>
@@ -289,7 +289,7 @@ export default function BookingPage() {
               <>
                 <div className="grid md:grid-cols-2 gap-4 mb-4">
                   <div>
-                    <label className="block text-sm font-medium text-gray-700 mb-1">
+                    <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">
                       {t('booking.walkDuration')} *
                     </label>
                     <select
@@ -304,14 +304,14 @@ export default function BookingPage() {
                   </div>
 
                   <div>
-                    <label className="block text-sm font-medium text-gray-700 mb-1">
+                    <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">
                       {t('booking.frequency')} *
                     </label>
                     <select
                       name="frequency"
                       value={formData.frequency}
                       onChange={handleChange}
-                      className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                      className="w-full px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent dark:bg-gray-700 dark:text-white"
                     >
                       <option value="once">{t('booking.once')}</option>
                       <option value="daily">{t('booking.daily')}</option>
@@ -321,7 +321,7 @@ export default function BookingPage() {
                 </div>
 
                 <div>
-                  <label className="block text-sm font-medium text-gray-700 mb-1">
+                  <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">
                     {t('booking.preferredStartDate')} *
                   </label>
                   <input
@@ -331,7 +331,7 @@ export default function BookingPage() {
                     value={formData.startDate}
                     onChange={handleChange}
                     min={new Date().toISOString().split('T')[0]}
-                    className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                    className="w-full px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent dark:bg-gray-700 dark:text-white"
                   />
                 </div>
               </>
@@ -340,7 +340,7 @@ export default function BookingPage() {
 
           {/* Special Instructions */}
           <div className="mb-6">
-            <label className="block text-sm font-medium text-gray-700 mb-1">
+            <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">
               {t('booking.specialInstructions')}
             </label>
             <textarea
@@ -349,19 +349,19 @@ export default function BookingPage() {
               onChange={handleChange}
               rows={4}
               placeholder={t('booking.specialInstructionsPlaceholder')}
-              className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+              className="w-full px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent dark:bg-gray-700 dark:text-white dark:placeholder-gray-400"
             />
           </div>
 
           {/* Submit */}
-          <div className="border-t pt-6">
+          <div className="border-t dark:border-gray-700 pt-6">
             <button
               type="submit"
               className="w-full bg-blue-600 text-white py-3 rounded-lg font-semibold hover:bg-blue-700 transition text-lg"
             >
               {t('booking.submitBooking')}
             </button>
-            <p className="text-sm text-gray-500 text-center mt-3">
+            <p className="text-sm text-gray-500 dark:text-gray-400 text-center mt-3">
               {t('booking.contactNote')}
             </p>
           </div>

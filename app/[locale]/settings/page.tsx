@@ -6,12 +6,13 @@ import { useTranslations } from 'next-intl';
 import Navigation from '@/components/Navigation';
 import Footer from '@/components/Footer';
 import LanguageSwitcher from '@/components/LanguageSwitcher';
+import ThemeSwitcher from '@/components/ThemeSwitcher';
 
 export default function SettingsPage() {
   const t = useTranslations();
 
   return (
-    <div className="min-h-screen bg-gray-50">
+    <div className="min-h-screen bg-gray-50 dark:bg-gray-900">
       {/* Navigation */}
       <Navigation />
 
@@ -36,27 +37,29 @@ export default function SettingsPage() {
       </section>
 
       <div className="max-w-4xl mx-auto px-4 py-12">
+        {/* Theme Settings */}
+        <div className="bg-white dark:bg-gray-800 rounded-lg shadow-md p-8 mb-8">
+          <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-4">
+            {t('settings.themeSettings')}
+          </h2>
+          <p className="text-gray-600 dark:text-gray-300 mb-6">
+            {t('settings.selectTheme')}
+          </p>
+
+          <ThemeSwitcher />
+        </div>
+
         {/* Language Settings */}
-        <div className="bg-white rounded-lg shadow-md p-8">
-          <h2 className="text-2xl font-bold text-gray-900 mb-4">
+        <div className="bg-white dark:bg-gray-800 rounded-lg shadow-md p-8">
+          <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-4">
             {t('settings.languageSettings')}
           </h2>
-          <p className="text-gray-600 mb-6">
+          <p className="text-gray-600 dark:text-gray-300 mb-6">
             {t('settings.selectLanguage')}
           </p>
 
           <LanguageSwitcher />
         </div>
-
-        {/* Additional Settings Sections (Placeholder) */}
-        {/* <div className="mt-8 bg-white rounded-lg shadow-md p-8">
-          <h2 className="text-2xl font-bold text-gray-900 mb-4">
-            More Settings Coming Soon
-          </h2>
-          <p className="text-gray-600">
-            Additional personalization options will be available in future updates.
-          </p>
-        </div> */}
       </div>
       <Footer />
     </div>

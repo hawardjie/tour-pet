@@ -37,7 +37,7 @@ export default async function BreedDetailPage({ params }: PageProps) {
   };
 
   return (
-    <div className="min-h-screen bg-gray-50">
+    <div className="min-h-screen bg-gray-50 dark:bg-gray-800">
       {/* Navigation */}
       <Navigation />
 
@@ -71,17 +71,17 @@ export default async function BreedDetailPage({ params }: PageProps) {
           {/* Main Content */}
           <div className="lg:col-span-2 space-y-8">
             {/* Overview */}
-            <div className="bg-white rounded-lg shadow-md p-6">
-              <h2 className="text-2xl font-bold text-gray-900 mb-4">{t('breedDetail.overview')}</h2>
-              <p className="text-gray-700 leading-relaxed">{t(`breeds.breed_${id}_description`)}</p>
+            <div className="bg-white dark:bg-gray-900 rounded-lg shadow-md p-6">
+              <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-4">{t('breedDetail.overview')}</h2>
+              <p className="text-gray-700 dark:text-gray-200 leading-relaxed">{t(`breeds.breed_${id}_description`)}</p>
             </div>
 
             {/* Temperament */}
-            <div className="bg-white rounded-lg shadow-md p-6">
-              <h2 className="text-2xl font-bold text-gray-900 mb-4">{t('breedDetail.temperament')}</h2>
+            <div className="bg-white dark:bg-gray-900 rounded-lg shadow-md p-6">
+              <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-4">{t('breedDetail.temperament')}</h2>
               <div className="flex flex-wrap gap-3">
                 {breed.temperament.map((trait, idx) => (
-                  <span key={idx} className="px-4 py-2 bg-blue-100 text-blue-800 rounded-full font-medium">
+                  <span key={idx} className="px-4 py-2 bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-100 rounded-full font-medium">
                     {t(`breeds.breed_${id}_temperament_${idx}`)}
                   </span>
                 ))}
@@ -95,12 +95,12 @@ export default async function BreedDetailPage({ params }: PageProps) {
                 {Object.entries(breed.characteristics).map(([key, value]) => (
                   <div key={key}>
                     <div className="flex justify-between items-center mb-2">
-                      <span className="font-medium text-gray-700 capitalize">
+                      <span className="font-medium text-gray-700 dark:text-gray-200 capitalize">
                         {t(`breeds.breed_${id}_characteristic_${key}`)}
                       </span>
-                      <span className="text-gray-600">{value}/10</span>
+                      <span className="text-gray-600 dark:text-gray-300">{value}/10</span>
                     </div>
-                    <div className="w-full bg-gray-200 rounded-full h-3">
+                    <div className="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-3">
                       <div
                         className="bg-blue-600 h-3 rounded-full transition-all"
                         style={{ width: `${value * 10}%` }}
@@ -112,13 +112,13 @@ export default async function BreedDetailPage({ params }: PageProps) {
             </div>
 
             {/* Care Notes */}
-            <div className="bg-white rounded-lg shadow-md p-6">
-              <h2 className="text-2xl font-bold text-gray-900 mb-4">{t('breedDetail.careNotes')}</h2>
+            <div className="bg-white dark:bg-gray-900 rounded-lg shadow-md p-6">
+              <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-4">{t('breedDetail.careNotes')}</h2>
               <ul className="space-y-3">
                 {breed.careNotes.map((note, idx) => (
                   <li key={idx} className="flex items-start">
                     <span className="text-blue-600 mr-2 mt-1">•</span>
-                    <span className="text-gray-700">{t(`breeds.breed_${id}_careNote_${idx}`)}</span>
+                    <span className="text-gray-700 dark:text-gray-200">{t(`breeds.breed_${id}_careNote_${idx}`)}</span>
                   </li>
                 ))}
               </ul>
@@ -136,52 +136,52 @@ export default async function BreedDetailPage({ params }: PageProps) {
           {/* Sidebar */}
           <div className="space-y-6">
             {/* Quick Facts */}
-            <div className="bg-white rounded-lg shadow-md p-6">
-              <h2 className="text-xl font-bold text-gray-900 mb-4">{t('breedDetail.quickFacts')}</h2>
+            <div className="bg-white dark:bg-gray-900 rounded-lg shadow-md p-6">
+              <h2 className="text-xl font-bold text-gray-900 dark:text-white mb-4">{t('breedDetail.quickFacts')}</h2>
               <div className="space-y-4">
                 <div>
-                  <div className="text-sm text-gray-500 mb-1">{t('breedDetail.lifespan')}</div>
-                  <div className="font-semibold text-gray-900">{t(`breeds.breed_${id}_lifespan`)}</div>
+                  <div className="text-sm text-gray-500 dark:text-gray-400 mb-1">{t('breedDetail.lifespan')}</div>
+                  <div className="font-semibold text-gray-900 dark:text-white">{t(`breeds.breed_${id}_lifespan`)}</div>
                 </div>
                 <div>
-                  <div className="text-sm text-gray-500 mb-1">{t('breedDetail.exerciseNeeds')}</div>
-                  <div className="font-semibold text-gray-900">{t(`breeds.breed_${id}_exercise`)}</div>
+                  <div className="text-sm text-gray-500 dark:text-gray-400 mb-1">{t('breedDetail.exerciseNeeds')}</div>
+                  <div className="font-semibold text-gray-900 dark:text-white">{t(`breeds.breed_${id}_exercise`)}</div>
                 </div>
                 <div>
-                  <div className="text-sm text-gray-500 mb-1">{t('breedDetail.groomingNeeds')}</div>
-                  <div className="font-semibold text-gray-900">{t(`breeds.breed_${id}_grooming`)}</div>
+                  <div className="text-sm text-gray-500 dark:text-gray-400 mb-1">{t('breedDetail.groomingNeeds')}</div>
+                  <div className="font-semibold text-gray-900 dark:text-white">{t(`breeds.breed_${id}_grooming`)}</div>
                 </div>
                 <div>
-                  <div className="text-sm text-gray-500 mb-1">{t('breedDetail.trainability')}</div>
-                  <div className="font-semibold text-gray-900">{t(`breeds.breed_${id}_training`)}</div>
+                  <div className="text-sm text-gray-500 dark:text-gray-400 mb-1">{t('breedDetail.trainability')}</div>
+                  <div className="font-semibold text-gray-900 dark:text-white">{t(`breeds.breed_${id}_training`)}</div>
                 </div>
               </div>
             </div>
 
             {/* Good With */}
-            <div className="bg-white rounded-lg shadow-md p-6">
-              <h2 className="text-xl font-bold text-gray-900 mb-4">{t('breedDetail.goodWith')}</h2>
+            <div className="bg-white dark:bg-gray-900 rounded-lg shadow-md p-6">
+              <h2 className="text-xl font-bold text-gray-900 dark:text-white mb-4">{t('breedDetail.goodWith')}</h2>
               <div className="space-y-3">
                 <div className="flex items-center justify-between">
-                  <span className="text-gray-700">{t('breedDetail.children')}</span>
+                  <span className="text-gray-700 dark:text-gray-200">{t('breedDetail.children')}</span>
                   <span className={breed.goodWith.children ? 'text-green-600 font-semibold' : 'text-red-600 font-semibold'}>
                     {breed.goodWith.children ? t('breedDetail.yes') : t('breedDetail.no')}
                   </span>
                 </div>
                 <div className="flex items-center justify-between">
-                  <span className="text-gray-700">{t('breedDetail.otherDogs')}</span>
+                  <span className="text-gray-700 dark:text-gray-200">{t('breedDetail.otherDogs')}</span>
                   <span className={breed.goodWith.dogs ? 'text-green-600 font-semibold' : 'text-red-600 font-semibold'}>
                     {breed.goodWith.dogs ? t('breedDetail.yes') : t('breedDetail.no')}
                   </span>
                 </div>
                 <div className="flex items-center justify-between">
-                  <span className="text-gray-700">{t('breedDetail.cats')}</span>
+                  <span className="text-gray-700 dark:text-gray-200">{t('breedDetail.cats')}</span>
                   <span className={breed.goodWith.cats ? 'text-green-600 font-semibold' : 'text-red-600 font-semibold'}>
                     {breed.goodWith.cats ? t('breedDetail.yes') : t('breedDetail.no')}
                   </span>
                 </div>
                 <div className="flex items-center justify-between">
-                  <span className="text-gray-700">{t('breedDetail.strangers')}</span>
+                  <span className="text-gray-700 dark:text-gray-200">{t('breedDetail.strangers')}</span>
                   <span className={breed.goodWith.strangers ? 'text-green-600 font-semibold' : 'text-red-600 font-semibold'}>
                     {breed.goodWith.strangers ? t('breedDetail.yes') : t('breedDetail.no')}
                   </span>
@@ -190,8 +190,8 @@ export default async function BreedDetailPage({ params }: PageProps) {
             </div>
 
             {/* Related Links */}
-            <div className="bg-gradient-to-br from-blue-50 to-blue-100 rounded-lg p-6">
-              <h2 className="text-xl font-bold text-gray-900 mb-4">{t('breedDetail.relatedResources')}</h2>
+            <div className="bg-gradient-to-br from-blue-50 to-blue-100 dark:from-blue-900 dark:to-blue-800 rounded-lg p-6">
+              <h2 className="text-xl font-bold text-gray-900 dark:text-white mb-4">{t('breedDetail.relatedResources')}</h2>
               <div className="space-y-2">
                 <Link href="/care" className="block text-blue-600 hover:text-blue-700 font-medium">
                   {t('breedDetail.careTipsGuidelines')}

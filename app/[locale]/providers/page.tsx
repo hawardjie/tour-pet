@@ -46,9 +46,9 @@ export default function ProvidersPage() {
   return (
     <>
       <Navigation />
-      <div className="min-h-screen bg-gray-50">
+      <div className="min-h-screen bg-gray-50 dark:bg-gray-900">
         {/* Hero Section */}
-        <div className="bg-blue-600 text-white py-12">
+        <div className="bg-blue-600 dark:bg-blue-700 text-white py-12">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <h1 className="text-4xl font-bold mb-4">{t('provider.findProviders')}</h1>
             <p className="text-xl text-blue-100">{t('provider.findProvidersDesc')}</p>
@@ -57,7 +57,7 @@ export default function ProvidersPage() {
 
         {/* Search Bar */}
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 -mt-6">
-          <div className="bg-white rounded-lg shadow-lg p-6">
+          <div className="bg-white dark:bg-gray-800 rounded-lg shadow-lg p-6">
             <form onSubmit={handleSearch} className="flex flex-col sm:flex-row gap-4">
               <div className="flex-1">
                 <input
@@ -65,7 +65,7 @@ export default function ProvidersPage() {
                   placeholder={t('provider.searchPlaceholder')}
                   value={searchTerm}
                   onChange={(e) => setSearchTerm(e.target.value)}
-                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+                  className="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 dark:bg-gray-700 dark:text-white dark:placeholder-gray-400"
                 />
               </div>
               <button
@@ -82,9 +82,9 @@ export default function ProvidersPage() {
           <div className="flex flex-col lg:flex-row gap-8">
             {/* Filters Sidebar */}
             <div className="lg:w-64 flex-shrink-0">
-              <div className="bg-white rounded-lg shadow p-6 sticky top-20">
+              <div className="bg-white dark:bg-gray-800 rounded-lg shadow p-6 sticky top-20">
                 <div className="flex justify-between items-center mb-4">
-                  <h2 className="text-lg font-semibold text-gray-900">{t('provider.filters')}</h2>
+                  <h2 className="text-lg font-semibold text-gray-900 dark:text-white">{t('provider.filters')}</h2>
                   {(filters.serviceType || filters.minPrice || filters.maxPrice || filters.maxDistance) && (
                     <button
                       onClick={clearFilters}
@@ -98,7 +98,7 @@ export default function ProvidersPage() {
                 <div className="space-y-6">
                   {/* Service Type Filter */}
                   <div>
-                    <h3 className="font-medium text-gray-900 mb-2">{t('provider.serviceType')}</h3>
+                    <h3 className="font-medium text-gray-900 dark:text-white mb-2">{t('provider.serviceType')}</h3>
                     <div className="space-y-2">
                       <label className="flex items-center">
                         <input
@@ -108,7 +108,7 @@ export default function ProvidersPage() {
                           onChange={() => handleFilterChange('serviceType', undefined)}
                           className="h-4 w-4 text-blue-600 focus:ring-blue-500 border-gray-300"
                         />
-                        <span className="ml-2 text-sm text-gray-700">{t('provider.allServices')}</span>
+                        <span className="ml-2 text-sm text-gray-700 dark:text-gray-300">{t('provider.allServices')}</span>
                       </label>
                       <label className="flex items-center">
                         <input
@@ -118,7 +118,7 @@ export default function ProvidersPage() {
                           onChange={() => handleFilterChange('serviceType', 'sitting')}
                           className="h-4 w-4 text-blue-600 focus:ring-blue-500 border-gray-300"
                         />
-                        <span className="ml-2 text-sm text-gray-700">{t('provider.dogSitting')}</span>
+                        <span className="ml-2 text-sm text-gray-700 dark:text-gray-300">{t('provider.dogSitting')}</span>
                       </label>
                       <label className="flex items-center">
                         <input
@@ -128,17 +128,17 @@ export default function ProvidersPage() {
                           onChange={() => handleFilterChange('serviceType', 'walking')}
                           className="h-4 w-4 text-blue-600 focus:ring-blue-500 border-gray-300"
                         />
-                        <span className="ml-2 text-sm text-gray-700">{t('provider.dogWalking')}</span>
+                        <span className="ml-2 text-sm text-gray-700 dark:text-gray-300">{t('provider.dogWalking')}</span>
                       </label>
                     </div>
                   </div>
 
                   {/* Price Range Filter */}
                   <div>
-                    <h3 className="font-medium text-gray-900 mb-2">{t('provider.priceRange')}</h3>
+                    <h3 className="font-medium text-gray-900 dark:text-white mb-2">{t('provider.priceRange')}</h3>
                     <div className="space-y-2">
                       <div>
-                        <label className="block text-xs text-gray-600 mb-1">{t('provider.minPrice')}</label>
+                        <label className="block text-xs text-gray-600 dark:text-gray-400 mb-1">{t('provider.minPrice')}</label>
                         <input
                           type="number"
                           min="0"
@@ -146,11 +146,11 @@ export default function ProvidersPage() {
                           placeholder="$0"
                           value={filters.minPrice || ''}
                           onChange={(e) => handleFilterChange('minPrice', e.target.value ? parseFloat(e.target.value) : undefined)}
-                          className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-blue-500 focus:border-blue-500"
+                          className="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-md focus:outline-none focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:text-white dark:placeholder-gray-400"
                         />
                       </div>
                       <div>
-                        <label className="block text-xs text-gray-600 mb-1">{t('provider.maxPrice')}</label>
+                        <label className="block text-xs text-gray-600 dark:text-gray-400 mb-1">{t('provider.maxPrice')}</label>
                         <input
                           type="number"
                           min="0"
@@ -158,7 +158,7 @@ export default function ProvidersPage() {
                           placeholder="$100"
                           value={filters.maxPrice || ''}
                           onChange={(e) => handleFilterChange('maxPrice', e.target.value ? parseFloat(e.target.value) : undefined)}
-                          className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-blue-500 focus:border-blue-500"
+                          className="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-md focus:outline-none focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:text-white dark:placeholder-gray-400"
                         />
                       </div>
                     </div>
@@ -166,11 +166,11 @@ export default function ProvidersPage() {
 
                   {/* Distance Filter */}
                   <div>
-                    <h3 className="font-medium text-gray-900 mb-2">{t('provider.maxDistance')}</h3>
+                    <h3 className="font-medium text-gray-900 dark:text-white mb-2">{t('provider.maxDistance')}</h3>
                     <select
                       value={filters.maxDistance || ''}
                       onChange={(e) => handleFilterChange('maxDistance', e.target.value ? parseInt(e.target.value) : undefined)}
-                      className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-blue-500 focus:border-blue-500"
+                      className="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-md focus:outline-none focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:text-white"
                     >
                       <option value="">{t('provider.anyDistance')}</option>
                       <option value="2">2 {t('provider.miles')}</option>
@@ -187,13 +187,13 @@ export default function ProvidersPage() {
             {/* Provider Cards */}
             <div className="flex-1">
               <div className="mb-4 flex justify-between items-center">
-                <h2 className="text-2xl font-bold text-gray-900">
+                <h2 className="text-2xl font-bold text-gray-900 dark:text-white">
                   {providers.length} {t('provider.providersFound')}
                 </h2>
               </div>
 
               {providers.length === 0 ? (
-                <div className="bg-white rounded-lg shadow p-8 text-center">
+                <div className="bg-white dark:bg-gray-800 rounded-lg shadow p-8 text-center">
                   <svg
                     className="mx-auto h-12 w-12 text-gray-400"
                     fill="none"
@@ -207,8 +207,8 @@ export default function ProvidersPage() {
                       d="M9.172 16.172a4 4 0 015.656 0M9 10h.01M15 10h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
                     />
                   </svg>
-                  <h3 className="mt-2 text-sm font-medium text-gray-900">{t('provider.noProvidersFound')}</h3>
-                  <p className="mt-1 text-sm text-gray-500">{t('provider.tryDifferentFilters')}</p>
+                  <h3 className="mt-2 text-sm font-medium text-gray-900 dark:text-white">{t('provider.noProvidersFound')}</h3>
+                  <p className="mt-1 text-sm text-gray-500 dark:text-gray-400">{t('provider.tryDifferentFilters')}</p>
                   <button
                     onClick={clearFilters}
                     className="mt-4 px-4 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700"
@@ -219,19 +219,19 @@ export default function ProvidersPage() {
               ) : (
                 <div className="space-y-6">
                   {providers.map((provider) => (
-                    <div key={provider.id} className="bg-white rounded-lg shadow hover:shadow-lg transition-shadow">
+                    <div key={provider.id} className="bg-white dark:bg-gray-800 rounded-lg shadow hover:shadow-lg transition-shadow">
                       <div className="p-6">
                         <div className="flex justify-between items-start">
                           <div className="flex-1">
                             <div className="flex items-center">
-                              <h3 className="text-xl font-semibold text-gray-900">{provider.name}</h3>
+                              <h3 className="text-xl font-semibold text-gray-900 dark:text-white">{provider.name}</h3>
                               {provider.verified && (
                                 <svg className="ml-2 w-5 h-5 text-blue-600" fill="currentColor" viewBox="0 0 20 20">
                                   <path fillRule="evenodd" d="M6.267 3.455a3.066 3.066 0 001.745-.723 3.066 3.066 0 013.976 0 3.066 3.066 0 001.745.723 3.066 3.066 0 012.812 2.812c.051.643.304 1.254.723 1.745a3.066 3.066 0 010 3.976 3.066 3.066 0 00-.723 1.745 3.066 3.066 0 01-2.812 2.812 3.066 3.066 0 00-1.745.723 3.066 3.066 0 01-3.976 0 3.066 3.066 0 00-1.745-.723 3.066 3.066 0 01-2.812-2.812 3.066 3.066 0 00-.723-1.745 3.066 3.066 0 010-3.976 3.066 3.066 0 00.723-1.745 3.066 3.066 0 012.812-2.812zm7.44 5.252a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
                                 </svg>
                               )}
                             </div>
-                            <div className="flex items-center mt-1 text-sm text-gray-600">
+                            <div className="flex items-center mt-1 text-sm text-gray-600 dark:text-gray-400">
                               <svg className="w-4 h-4 mr-1" fill="currentColor" viewBox="0 0 20 20">
                                 <path fillRule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clipRule="evenodd" />
                               </svg>
@@ -244,19 +244,19 @@ export default function ProvidersPage() {
                                 </svg>
                                 <span className="ml-1 font-medium">{provider.rating.toFixed(1)}</span>
                               </div>
-                              <span className="ml-2 text-sm text-gray-500">({provider.reviewCount} {t('provider.reviews')})</span>
+                              <span className="ml-2 text-sm text-gray-500 dark:text-gray-400">({provider.reviewCount} {t('provider.reviews')})</span>
                             </div>
                           </div>
 
                           <div className="ml-4 text-right">
-                            <div className="text-sm text-gray-600 mb-1">{t('provider.startingAt')}</div>
+                            <div className="text-sm text-gray-600 dark:text-gray-400 mb-1">{t('provider.startingAt')}</div>
                             <div className="text-2xl font-bold text-blue-600">
                               ${Math.min(...provider.services.map(s => s.price))}
                             </div>
                           </div>
                         </div>
 
-                        <p className="mt-4 text-gray-700 line-clamp-2">{provider.bio}</p>
+                        <p className="mt-4 text-gray-700 dark:text-gray-300 line-clamp-2">{provider.bio}</p>
 
                         <div className="mt-4 flex flex-wrap gap-2">
                           {provider.services.map((service, idx) => (
@@ -271,7 +271,7 @@ export default function ProvidersPage() {
                           )}
                         </div>
 
-                        <div className="mt-4 flex items-center text-sm text-gray-600">
+                        <div className="mt-4 flex items-center text-sm text-gray-600 dark:text-gray-400">
                           <svg className="w-4 h-4 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
@@ -279,7 +279,7 @@ export default function ProvidersPage() {
                           {t('provider.servicesWithin')} {provider.serviceRadius} {t('provider.miles')}
                         </div>
 
-                        <div className="mt-4 pt-4 border-t border-gray-200 flex justify-end">
+                        <div className="mt-4 pt-4 border-t border-gray-200 dark:border-gray-700 flex justify-end">
                           <Link
                             href={`/providers/${provider.id}`}
                             className="px-6 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700 font-medium"

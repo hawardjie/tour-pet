@@ -509,7 +509,7 @@ export default function ProviderRegisterPage() {
 
                 <div className="space-y-3">
                   {Object.keys(formData.availability).map((day) => (
-                    <label key={day} className="flex items-center p-3 border border-gray-300 rounded-lg hover:bg-gray-50 cursor-pointer">
+                    <label key={day} className="flex items-center p-3 border border-gray-300 rounded-lg hover:bg-gray-50 dark:hover:bg-gray-700 cursor-pointer">
                       <input
                         type="checkbox"
                         checked={formData.availability[day as keyof typeof formData.availability]}
@@ -528,7 +528,7 @@ export default function ProviderRegisterPage() {
               {step > 1 && (
                 <button
                   onClick={prevStep}
-                  className="px-6 py-2 border border-gray-300 rounded-md text-gray-700 hover:bg-gray-50"
+                  className="px-6 py-2 border border-gray-300 rounded-md text-gray-700 hover:bg-gray-50 dark:hover:bg-gray-700"
                 >
                   {t('common.previous')}
                 </button>
